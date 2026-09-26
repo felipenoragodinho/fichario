@@ -1,0 +1,17 @@
+{
+  "name": "Fichário de Inglês",
+  "short_name": "Fichário",
+  "description": "Treino das palavras das suas aulas de inglês, com índice de reforço, áudio e prática com IA.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EDF0F5",
+  "theme_color": "#1F4BB8",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

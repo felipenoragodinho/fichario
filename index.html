@@ -1,0 +1,2490 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fichário de Inglês</title>
+<meta name="description" content="Treino das palavras das suas aulas de inglês, com índice de reforço, áudio e prática com IA.">
+<meta name="theme-color" content="#EDF0F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1320" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Fichário">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&family=Zilla+Slab:wght@500;600;700&display=swap">
+<style>
+:root{
+  --ground:#EDF0F5; --card:#FFFFFF; --card-2:#F5F7FB;
+  --ink:#172136; --ink-2:#4A5570; --ink-3:#737E94;
+  --rule:#DDE4EF; --rule-2:#C4CFE0;
+  --pen:#1F4BB8; --pen-ink:#FFFFFF; --pen-soft:#E4EAFA;
+  --red:#C93C34; --red-soft:#FBE8E6;
+  --hl:#FFE14D; --hl-ink:#172136;
+  --ok:#1C8454; --ok-soft:#E0F2E9;
+  --b-new:#A3ABBB; --b-weak:#C93C34; --b-learn:#D2830C; --b-near:#2B78BE; --b-done:#1C8454;
+  --shadow:0 1px 0 rgba(23,33,54,.04), 0 10px 26px -16px rgba(23,33,54,.30);
+  --radius:12px;
+  --f-display:"Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1320; --card:#161D2D; --card-2:#1B2337;
+    --ink:#E7ECF5; --ink-2:#AAB4C7; --ink-3:#808BA1;
+    --rule:#243049; --rule-2:#34415E;
+    --pen:#8FA9FF; --pen-ink:#0C1120; --pen-soft:#1D2848;
+    --red:#F0746C; --red-soft:#3A1F25;
+    --hl:#E8C94A; --hl-ink:#16140A;
+    --ok:#46C08B; --ok-soft:#163226;
+    --b-new:#66718A; --b-weak:#F0746C; --b-learn:#F0AA3E; --b-near:#63A9EA; --b-done:#46C08B;
+    --shadow:0 1px 0 rgba(0,0,0,.25), 0 12px 30px -18px rgba(0,0,0,.8);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1320; --card:#161D2D; --card-2:#1B2337;
+  --ink:#E7ECF5; --ink-2:#AAB4C7; --ink-3:#808BA1;
+  --rule:#243049; --rule-2:#34415E;
+  --pen:#8FA9FF; --pen-ink:#0C1120; --pen-soft:#1D2848;
+  --red:#F0746C; --red-soft:#3A1F25;
+  --hl:#E8C94A; --hl-ink:#16140A;
+  --ok:#46C08B; --ok-soft:#163226;
+  --b-new:#66718A; --b-weak:#F0746C; --b-learn:#F0AA3E; --b-near:#63A9EA; --b-done:#46C08B;
+  --shadow:0 1px 0 rgba(0,0,0,.25), 0 12px 30px -18px rgba(0,0,0,.8);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+html,body{min-height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+h1,h2,h3,h4{font-family:var(--f-display);margin:0;text-wrap:balance;letter-spacing:-.005em}
+h1{font-size:30px;line-height:1.1;font-weight:700}
+h2{font-size:22px;line-height:1.2;font-weight:600}
+h3{font-size:19px;line-height:1.25;font-weight:600}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--pen)}
+svg{flex:none}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.label{font:600 11.5px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.meta{color:var(--ink-2);font-size:14.5px}
+.muted{color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+mark.hl,mark.tw{color:var(--hl-ink);background:linear-gradient(transparent 10%,var(--hl) 10%,var(--hl) 90%,transparent 90%);padding:0 .12em;border-radius:2px}
+mark.tw{cursor:pointer;font-weight:700}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- shell ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--ground);border-bottom:1px solid var(--rule)}
+.top-in{max-width:1080px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:10px;min-height:58px}
+.brand{display:flex;align-items:center;gap:10px;background:none;border:0;color:var(--ink);padding:4px 0;text-align:left}
+.brand-name{display:flex;flex-direction:column;line-height:1}
+.brand-name b{font:700 22px/1 var(--f-display);letter-spacing:-.01em}
+.brand-name small{font:600 10.5px/1.2 var(--f-mono);color:var(--ink-3);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
+.logo .c{fill:var(--card);stroke:var(--ink)}
+.logo .r{stroke:var(--red)}
+.logo .l{stroke:var(--rule-2)}
+.topnav{display:none;margin-left:auto;gap:2px}
+.top-actions{display:flex;align-items:center;gap:4px;margin-left:auto}
+.sync{font:600 11px/1 var(--f-mono);color:var(--ink-3);letter-spacing:.04em;padding:6px 8px;border-radius:999px}
+.sync.err{color:var(--red);background:var(--red-soft)}
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(5,1fr);padding:4px 4px calc(4px + env(safe-area-inset-bottom,0px))}
+.tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;background:none;border:0;color:var(--ink-3);font:700 11.5px/1.1 var(--f-body);padding:6px 2px;border-radius:10px;min-height:52px}
+.tab svg{width:24px;height:24px}
+.tab[aria-current="page"]{color:var(--pen)}
+.topnav .tab{flex-direction:row;gap:8px;font-size:14.5px;min-height:40px;padding:0 12px}
+.topnav .tab svg{width:20px;height:20px}
+.topnav .tab[aria-current="page"]{background:var(--pen-soft)}
+.view{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:18px calc(92px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){
+  .topnav{display:flex}
+  .top-actions{margin-left:8px}
+  .tabbar{display:none}
+  .view{padding-block:28px 56px}
+}
+
+/* ---------- controls ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 16px;border-radius:10px;border:1.5px solid var(--rule-2);background:var(--card);color:var(--ink);font:700 15px/1.2 var(--f-body);text-decoration:none;text-align:center;max-width:100%}
+.btn:hover{border-color:var(--pen)}
+.btn svg{width:20px;height:20px}
+.btn.small svg{width:18px;height:18px}
+.btn.primary{background:var(--pen);border-color:var(--pen);color:var(--pen-ink)}
+.btn.primary:hover{filter:brightness(1.08)}
+.btn.big{min-height:54px;font-size:17px;padding:0 24px}
+.btn.wide{width:100%}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--ink-2)}
+.btn.ghost:hover{background:var(--card-2)}
+.btn.danger{color:var(--red);border-color:color-mix(in srgb,var(--red) 40%,var(--rule-2))}
+.btn.small{min-height:36px;padding:0 12px;font-size:14px}
+.btn:disabled{opacity:.5;cursor:not-allowed;filter:none}
+.icon-btn{width:44px;height:44px;display:inline-grid;place-items:center;border-radius:10px;border:0;background:transparent;color:var(--ink-2)}
+.icon-btn:hover{background:var(--card-2);color:var(--ink)}
+.icon-btn svg{width:22px;height:22px}
+.say{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--rule-2);background:var(--card);color:var(--pen);vertical-align:middle}
+.say:hover{border-color:var(--pen)}
+.say svg{width:20px;height:20px}
+.say.sm{width:32px;height:32px}
+.say.sm svg{width:16px;height:16px}
+:is(button,a,input,select,textarea,summary):focus-visible{outline:3px solid color-mix(in srgb,var(--pen) 60%,transparent);outline-offset:2px}
+.field{width:100%;min-height:50px;padding:11px 14px;border-radius:10px;border:1.5px solid var(--rule-2);background:var(--card);color:var(--ink);font:600 18px/1.3 var(--f-body)}
+.field:focus{border-color:var(--pen);outline:none}
+.field.sm{min-height:42px;font-size:16px;font-weight:400;padding:8px 12px}
+textarea.field{min-height:92px;resize:vertical;font-weight:400;font-size:17px;line-height:1.45}
+select.field{font-weight:600;font-size:16px;appearance:auto}
+.fgroup{display:grid;gap:6px}
+.fgroup > span{font:700 14px/1.2 var(--f-body);color:var(--ink-2)}
+.check{display:flex;align-items:center;gap:10px;font-size:15.5px;min-height:40px}
+.check input{width:20px;height:20px;accent-color:var(--pen)}
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px}
+.seg button{min-height:38px;padding:0 14px;border-radius:999px;border:1.5px solid var(--rule-2);background:var(--card);font:700 14px/1 var(--f-body);color:var(--ink-2)}
+.seg button[aria-pressed="true"]{background:var(--pen);border-color:var(--pen);color:var(--pen-ink)}
+.chip{display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:999px;border:1px solid var(--rule-2);background:var(--card);color:var(--ink);font:600 15px/1.2 var(--f-display);text-decoration:none}
+.chip:hover{border-color:var(--pen)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--b-new);flex:none}
+.dot.weak{background:var(--b-weak)} .dot.learn{background:var(--b-learn)} .dot.near{background:var(--b-near)} .dot.done{background:var(--b-done)}
+.meter{display:inline-flex;gap:2px;align-items:center;color:var(--b-new)}
+.meter i{display:block;width:5px;height:13px;border-radius:2px;background:var(--rule-2)}
+.meter i.on{background:currentColor}
+.meter.weak{color:var(--b-weak)} .meter.learn{color:var(--b-learn)} .meter.near{color:var(--b-near)} .meter.done{color:var(--b-done)}
+.pct{font:600 13px/1 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink-2);min-width:3.2ch;text-align:right}
+.band-pill{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2)}
+.linkish{background:none;border:0;padding:0;color:var(--pen);font:700 14.5px/1.3 var(--f-body);text-decoration:underline;text-underline-offset:3px;text-align:left}
+
+/* ---------- panels & home ---------- */
+.panel{background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);display:grid;gap:14px;min-width:0}
+.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.home{display:grid;gap:16px}
+.stack{display:grid;gap:16px;align-content:start;min-width:0}
+@media (min-width:960px){.home{grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);align-items:start}}
+.hello{display:grid;gap:4px;padding:2px 2px 4px}
+.index-top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.big{font:700 64px/0.95 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.big small{font-size:30px;margin-left:2px;color:var(--ink-2)}
+.distbar{display:flex;height:14px;border-radius:7px;overflow:hidden;background:var(--rule);gap:2px}
+.distbar span{display:block;height:100%;min-width:3px}
+.legend{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:14px;color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:6px}
+.legend b{font:600 14px/1 var(--f-mono);color:var(--ink)}
+.cta{background:var(--pen-soft);border-color:color-mix(in srgb,var(--pen) 25%,var(--rule))}
+.cta-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cta-row > div{display:grid;gap:4px;min-width:0}
+.more-train{display:grid;gap:8px}
+.lesson-tag{display:inline-block;font:600 11.5px/1 var(--f-mono);letter-spacing:.06em;color:var(--ink-2);border:1px solid var(--rule-2);border-radius:5px;padding:4px 6px;white-space:nowrap}
+.linklist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.linkrow{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px dashed var(--rule-2);border-radius:10px;min-width:0}
+.linkrow a{flex:1;min-width:0;font-weight:700;overflow-wrap:anywhere}
+.linkrow.done a{color:var(--ink-3);text-decoration:line-through}
+.row-actions{display:flex;flex-wrap:wrap;gap:8px}
+.strip{display:grid;grid-template-columns:repeat(14,1fr);gap:4px}
+.strip span{aspect-ratio:1;border-radius:4px;background:var(--rule);max-width:100%}
+.strip span.l1{background:color-mix(in srgb,var(--pen) 35%,var(--rule))}
+.strip span.l2{background:color-mix(in srgb,var(--pen) 65%,var(--rule))}
+.strip span.l3{background:var(--pen)}
+.strip span.today{outline:2px solid var(--ink);outline-offset:1px}
+.streak{font:700 34px/1 var(--f-display)}
+.streak small{font:400 16px/1.2 var(--f-body);color:var(--ink-2);margin-left:6px}
+.mini-list{list-style:none;margin:0;padding:0;display:grid}
+.mini-list li+li{border-top:1px solid var(--rule)}
+.mini-row{display:flex;align-items:center;gap:10px;width:100%;padding:10px 0;background:none;border:0;text-align:left;color:var(--ink)}
+.mini-row .w{flex:1;min-width:0;font:600 17px/1.2 var(--f-display);overflow-wrap:anywhere}
+.mini-row .w small{display:block;font:400 14px/1.3 var(--f-body);color:var(--ink-2);margin-top:2px}
+.empty{display:grid;gap:14px;justify-items:start;max-width:560px;padding:28px 4px}
+.notice{border:1px solid var(--rule-2);background:var(--card-2);border-radius:10px;padding:12px 14px;font-size:14.5px;color:var(--ink-2)}
+.notice.warn{border-color:color-mix(in srgb,var(--b-learn) 50%,var(--rule-2))}
+
+/* ---------- lists ---------- */
+.screen-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.screen-head > div{display:grid;gap:4px}
+.filters{display:grid;grid-template-columns:1fr;gap:8px;margin-bottom:12px}
+@media (min-width:700px){.filters{grid-template-columns:2fr 1fr 1fr 1fr}}
+.wordlist{list-style:none;margin:0;padding:0;background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+.wordlist li+li{border-top:1px solid var(--rule)}
+.wrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 12px;width:100%;padding:12px 14px;background:none;border:0;text-align:left;color:var(--ink);align-items:center}
+.wrow:hover{background:var(--card-2)}
+.w-en{font:600 18px/1.25 var(--f-display);overflow-wrap:anywhere}
+.w-pt{grid-column:1;color:var(--ink-2);font-size:15px;overflow-wrap:anywhere}
+.w-side{grid-column:2;grid-row:1 / span 2;display:flex;align-items:center;gap:8px}
+.w-concept{font:600 10.5px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--pen);margin-left:6px;vertical-align:2px}
+.lessons{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.lrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 14px;align-items:center;width:100%;padding:14px 16px;background:var(--card);border:1px solid var(--rule);border-radius:var(--radius);text-align:left;color:var(--ink)}
+.lrow:hover{border-color:var(--pen)}
+.lnum{grid-row:1 / span 2;font:700 30px/1 var(--f-display);min-width:2.2ch;color:var(--pen)}
+.lrow .t{font:600 17px/1.2 var(--f-display)}
+.lrow .s{font-size:14px;color:var(--ink-2)}
+.lrow .r{grid-column:3;grid-row:1 / span 2;display:flex;align-items:center;gap:8px}
+.textblock{border-left:3px solid var(--red);padding:4px 0 4px 14px;display:grid;gap:4px;font-size:16.5px}
+.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 10px}
+details.raw summary{cursor:pointer;font-weight:700;color:var(--ink-2)}
+details.raw pre{white-space:pre-wrap;font:14px/1.5 var(--f-mono);background:var(--card-2);border-radius:10px;padding:12px;margin:10px 0 0;overflow-x:auto}
+
+/* ---------- practice ---------- */
+.layer{position:fixed;inset:0;z-index:50;background:var(--ground);display:flex;flex-direction:column}
+.pr-top{padding:calc(6px + env(safe-area-inset-top,0px)) 12px 6px}
+.pr-top-in{display:flex;align-items:center;gap:10px;max-width:640px;margin:0 auto}
+.pr-bar{flex:1;height:8px;border-radius:4px;background:var(--rule);overflow:hidden}
+.pr-bar span{display:block;height:100%;background:var(--pen);border-radius:4px;transition:width .35s ease}
+.pr-count{font:600 13px/1 var(--f-mono);color:var(--ink-2);min-width:5ch;text-align:right}
+.pr-scroll{flex:1;overflow-y:auto;padding:6px 16px 18px;-webkit-overflow-scrolling:touch}
+.pr-inner{max-width:600px;margin:0 auto;display:grid;gap:14px}
+.icard{background:var(--card);border:1px solid var(--rule);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.icard-head{padding:16px 18px 14px;border-bottom:2px solid var(--red);display:grid;gap:8px}
+.icard-body{padding:16px 18px 18px;display:grid;gap:14px;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 31px,var(--rule) 31px,var(--rule) 32px);background-position:0 15px}
+.ex-label{font:600 11.5px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--pen)}
+.ex-word{font:700 clamp(32px,8.5vw,46px)/1.08 var(--f-display);letter-spacing:-.01em;overflow-wrap:anywhere}
+.ex-mean{font:600 clamp(22px,5.8vw,30px)/1.2 var(--f-display);overflow-wrap:anywhere}
+.ex-sent{font:500 clamp(20px,5.2vw,25px)/1.35 var(--f-display);overflow-wrap:anywhere}
+.ex-sent .blank{display:inline-block;min-width:3.5em;border-bottom:3px solid var(--pen);color:var(--pen);text-align:center;line-height:1.1}
+.ex-sub{color:var(--ink-2);font-size:15.5px}
+.ex-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pron{font:600 14px/1.3 var(--f-mono);color:var(--ink-2)}
+.pron b{color:var(--red);font-weight:600}
+.note{font-size:15px;color:var(--ink-2);background:var(--card-2);border-radius:8px;padding:8px 10px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:54px;padding:10px 14px;border-radius:10px;border:1.5px solid var(--rule-2);background:var(--card);color:var(--ink);font:600 17.5px/1.3 var(--f-body);text-align:left}
+.opt:hover:not(:disabled){border-color:var(--pen)}
+.opt kbd{font:600 12px/1 var(--f-mono);color:var(--ink-3);border:1px solid var(--rule-2);border-radius:5px;padding:4px 6px;background:var(--card-2)}
+.opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft);text-decoration:line-through;text-decoration-color:var(--red)}
+.opt:disabled{cursor:default}
+.play-row{display:flex;align-items:center;justify-content:center;gap:16px;padding:6px 0}
+.play{width:88px;height:88px;border-radius:50%;background:var(--pen);color:var(--pen-ink);border:0;display:grid;place-items:center;box-shadow:0 8px 22px -10px var(--pen)}
+.play svg{width:38px;height:38px}
+.hint{font:600 18px/1.4 var(--f-mono);letter-spacing:.12em;color:var(--ink-2)}
+.fb{border-radius:10px;padding:14px 16px;border:1.5px solid var(--rule-2);background:var(--card);display:grid;gap:8px}
+.fb.ok{border-color:var(--ok);background:var(--ok-soft)}
+.fb.bad{border-color:var(--red);background:var(--red-soft)}
+.fb.almost{border-color:var(--b-learn);background:color-mix(in srgb,var(--b-learn) 12%,var(--card))}
+.fb-title{font:700 20px/1.2 var(--f-display)}
+.fb-ans{font-size:17px}
+.fb-ans b{font-family:var(--f-display);font-size:19px}
+.fb-meter{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
+.fb-meter .arrow{font:600 14px/1 var(--f-mono);color:var(--ink)}
+.diff .w-ok{color:var(--ok);font-weight:700}
+.diff .w-miss{color:var(--red);font-weight:700;text-decoration:underline wavy;text-underline-offset:4px}
+.pr-foot{padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--rule);background:var(--card)}
+.pr-foot-in{max-width:600px;margin:0 auto;display:flex;gap:10px}
+.pr-foot-in .btn{flex:1}
+.pr-foot-in .btn.ghost{flex:0 0 auto}
+.summary{display:grid;gap:14px}
+.sum-list{list-style:none;margin:0;padding:0;display:grid}
+.sum-list li{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--rule)}
+.sum-list .w{flex:1;min-width:0;font:600 16.5px/1.25 var(--f-display);overflow-wrap:anywhere}
+.delta{font:600 13px/1 var(--f-mono);min-width:6ch;text-align:right}
+.delta.up{color:var(--ok)} .delta.down{color:var(--red)} .delta.eq{color:var(--ink-3)}
+.thinking{display:inline-flex;align-items:center;gap:10px;color:var(--ink-2);font-size:15px}
+.thinking::before{content:"";width:14px;height:14px;border-radius:50%;border:2px solid var(--rule-2);border-top-color:var(--pen);animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- sheets ---------- */
+.sheet-wrap{position:fixed;inset:0;z-index:60;background:rgba(8,12,22,.5);display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--card);width:100%;max-width:640px;max-height:92vh;max-height:92dvh;overflow:auto;border-radius:16px 16px 0 0;padding:16px 18px calc(20px + env(safe-area-inset-bottom,0px));box-shadow:0 -12px 40px rgba(0,0,0,.25);display:grid;gap:14px;align-content:start}
+.sheet.full{max-width:860px;height:100%;max-height:none;border-radius:0;padding-top:calc(12px + env(safe-area-inset-top,0px))}
+@media (min-width:700px){
+  .sheet-wrap{align-items:center;padding:24px}
+  .sheet{border-radius:16px;max-height:88vh;max-height:88dvh}
+  .sheet.full{height:auto;max-height:94vh;max-height:94dvh;border-radius:16px;padding-top:16px}
+}
+.sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.sheet-head > div{display:grid;gap:4px;min-width:0}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+.kv dt{color:var(--ink-3)}
+.kv dd{margin:0;font-weight:700}
+.edit-items{display:grid;gap:10px}
+.edit-item{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:start;padding:10px;border:1px solid var(--rule);border-radius:10px;background:var(--card-2)}
+.edit-item .full{grid-column:1 / span 2}
+.edit-item.concept{grid-template-columns:minmax(0,1fr) auto}
+.edit-item.concept .full{grid-column:1}
+@media (max-width:520px){.edit-item{grid-template-columns:minmax(0,1fr) auto}.edit-item > .field:nth-child(2){grid-column:1}.edit-item .full{grid-column:1}}
+.drop{display:grid;place-items:center;gap:8px;text-align:center;padding:26px 16px;border:2px dashed var(--rule-2);border-radius:14px;background:var(--card-2);cursor:pointer}
+.drop.over{border-color:var(--pen);background:var(--pen-soft)}
+.drop input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.grid2{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:80;background:var(--ink);color:var(--ground);padding:12px 16px;border-radius:10px;font-weight:700;font-size:15px;max-width:calc(100% - 32px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+@media (min-width:900px){.toast{bottom:28px}}
+
+/* ---------- listen & chat ---------- */
+.listen-grid{display:grid;gap:16px}
+@media (min-width:960px){.listen-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}}
+.now-card{border:1px solid var(--rule);border-radius:10px;padding:14px;background:var(--card-2);display:grid;gap:6px;min-height:120px}
+.now-card .w{font:700 28px/1.1 var(--f-display);overflow-wrap:anywhere}
+.now-card .s{font:500 19px/1.35 var(--f-display);overflow-wrap:anywhere}
+.now-card .p{color:var(--ink-2);font-size:15px}
+.ctrls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.story{display:grid;gap:4px}
+.sline{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;padding:8px 10px;border-radius:8px;border:1px solid transparent;text-align:left;background:none;color:var(--ink);width:100%}
+.sline:hover{background:var(--card-2)}
+.sline.playing{background:var(--pen-soft);border-color:color-mix(in srgb,var(--pen) 35%,transparent)}
+.sp{font:600 12px/1.9 var(--f-mono);color:var(--pen);min-width:1.5ch}
+.sline .en{font:500 19px/1.45 var(--f-display)}
+.sline .pt{display:block;font:400 14.5px/1.4 var(--f-body);color:var(--ink-2);margin-top:2px}
+.story.hide-text .en{filter:blur(6px);user-select:none}
+.story.hide-pt .pt{display:none}
+.defbar{position:sticky;bottom:calc(76px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--ink);color:var(--ground);font-weight:700}
+@media (min-width:900px){.defbar{bottom:16px}}
+.qlist{display:grid;gap:14px}
+.q{display:grid;gap:8px}
+.q p{font-weight:700}
+.chat{display:grid;gap:12px}
+.msg{max-width:88%;padding:10px 14px;border-radius:14px;display:grid;gap:6px;font-size:16.5px;line-height:1.45}
+.msg.ai{background:var(--card);border:1px solid var(--rule);border-bottom-left-radius:4px;justify-self:start}
+.msg.me{background:var(--pen);color:var(--pen-ink);border-bottom-right-radius:4px;justify-self:end}
+.msg .row{display:flex;align-items:flex-start;gap:8px}
+.msg .row > span{flex:1;min-width:0;overflow-wrap:anywhere}
+.fix{justify-self:end;max-width:88%;border-left:3px solid var(--red);padding:6px 10px;font-size:15px;color:var(--ink-2);display:grid;gap:4px;background:var(--card)}
+.fix b{color:var(--red)}
+.used{justify-self:end;display:flex;flex-wrap:wrap;gap:6px}
+.used span{font:600 12px/1 var(--f-mono);padding:5px 8px;border-radius:999px;background:var(--ok-soft);color:var(--ok)}
+.used span.no{background:var(--red-soft);color:var(--red)}
+.composer{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:calc(72px + env(safe-area-inset-bottom,0px));background:var(--ground);padding:8px 0}
+@media (min-width:900px){.composer{bottom:0}}
+.composer textarea{min-height:52px;max-height:160px}
+.tchip{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;border:1px solid var(--rule-2);font:600 14.5px/1.2 var(--f-display);background:var(--card)}
+.tchip.ok{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <header class="top">
+    <div class="top-in">
+      <button class="brand" data-act="tab" data-tab="home" aria-label="Ir para o início">
+        <svg class="logo" viewBox="0 0 32 32" width="32" height="32" aria-hidden="true" fill="none" stroke-linecap="round">
+          <rect class="c" x="3" y="6.5" width="26" height="19" rx="2.5" stroke-width="1.8"/>
+          <line class="r" x1="3.9" y1="12" x2="28.1" y2="12" stroke-width="1.8"/>
+          <line class="l" x1="7.5" y1="16.8" x2="24.5" y2="16.8" stroke-width="1.5"/>
+          <line class="l" x1="7.5" y1="21" x2="19" y2="21" stroke-width="1.5"/>
+        </svg>
+        <span class="brand-name"><b>Fichário</b><small>de inglês</small></span>
+      </button>
+      <nav class="topnav" id="topnav" aria-label="Seções"></nav>
+      <div class="top-actions">
+        <span id="sync" class="sync" role="status"></span>
+        <button class="icon-btn" data-act="settings" aria-label="Ajustes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="view" class="view" tabindex="-1"></main>
+  <nav class="tabbar" id="tabbar" aria-label="Seções"></nav>
+</div>
+<div id="layer-practice" class="layer" hidden></div>
+<div id="layer-sheet" class="sheet-wrap" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<script>
+'use strict';
+/* ================= utils ================= */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const DAY = 864e5;
+const now = () => Date.now();
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const pad2 = (n) => String(n).padStart(2, '0');
+const dayKey = (t = Date.now()) => { const d = new Date(t); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); };
+const shuffle = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); const t = a[i]; a[i] = a[j]; a[j] = t; } return a; };
+const pick = (a) => a[Math.floor(Math.random() * a.length)];
+const stripMarks = (s) => String(s ?? '').replace(/[⟦⟧]/g, '').replace(/\[\[|\]\]/g, '');
+const hl = (s) => esc(s).replace(/⟦([^⟧]*)⟧/g, '<mark class="hl">$1</mark>');
+const cap1 = (s) => s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+function slug(s) {
+  return String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[⟦⟧]/g, '')
+    .replace(/^to\s+/, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'item';
+}
+function norm(s) {
+  return String(s ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[’‘`´]/g, "'").replace(/[^a-z0-9' ]+/g, ' ').replace(/'/g, '').replace(/\s+/g, ' ').trim();
+}
+const stripLead = (s) => s.replace(/^(to|a|an|the) /, '');
+function lev(a, b) {
+  if (a === b) return 0; if (!a.length) return b.length; if (!b.length) return a.length;
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[b.length];
+}
+const MONTHS = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+function fmtDate(iso) { if (!iso) return ''; const [y, m, d] = String(iso).split('-').map(Number); if (!m) return ''; return d + ' ' + MONTHS[m - 1] + (y !== new Date().getFullYear() ? ' ' + y : ''); }
+function relDays(t) {
+  if (!t) return '—';
+  const d = Math.round((new Date(dayKey()).getTime() - new Date(dayKey(t)).getTime()) / DAY);
+  if (d <= 0) return 'hoje'; if (d === 1) return 'ontem'; return 'há ' + d + ' dias';
+}
+function inDays(days) { if (days <= 0.5) return 'agora'; if (days < 1.5) return 'amanhã'; return 'em ' + Math.round(days) + ' dias'; }
+function lsGet(k, d) { try { const v = localStorage.getItem('fichario:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }
+function lsSet(k, v) { try { localStorage.setItem('fichario:' + k, JSON.stringify(v)); } catch (e) { /* storage off */ } }
+let toastTimer = 0;
+function toast(msg, ms = 2600) {
+  const t = $('#toast'); if (!t) return;
+  t.textContent = msg; t.hidden = false; clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.hidden = true; }, ms);
+}
+
+/* ================= icons ================= */
+const I = (p, extra = '') => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${p}</svg>`;
+const IC = {
+  home: I('<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M9 3v4M15 3v4"/><circle cx="12" cy="14.5" r="1.7" fill="currentColor" stroke="none"/>'),
+  listen: I('<path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4.5" height="6.5" rx="1.6"/><rect x="16.5" y="14" width="4.5" height="6.5" rx="1.6"/>'),
+  chat: I('<path d="M5 4.5h14a2 2 0 0 1 2 2v8.5a2 2 0 0 1-2 2h-7l-4.5 3.5V17H5a2 2 0 0 1-2-2V6.5a2 2 0 0 1 2-2z"/><path d="M7.5 9.5h9M7.5 12.5h6"/>'),
+  words: I('<rect x="7" y="7" width="13" height="12" rx="2"/><path d="M4 15.5V6a2 2 0 0 1 2-2h10.5"/><path d="M10 11.5h7M10 15h4.5"/>'),
+  lessons: I('<path d="M6.5 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-11z"/><path d="M6.5 3v18M4 7.5h4.5M4 12h4.5M4 16.5h4.5M11 8h5.5"/>'),
+  speaker: I('<path d="M4 9.5v5h3.5l4.5 3.8V5.7L7.5 9.5z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/>'),
+  play: I('<path d="M8 5.5l11 6.5-11 6.5z" fill="currentColor"/>'),
+  pause: I('<rect x="6.5" y="5" width="3.8" height="14" rx="1" fill="currentColor"/><rect x="13.7" y="5" width="3.8" height="14" rx="1" fill="currentColor"/>'),
+  prev: I('<path d="M17 6l-7 6 7 6z" fill="currentColor"/><path d="M7 6v12"/>'),
+  next: I('<path d="M7 6l7 6-7 6z" fill="currentColor"/><path d="M17 6v12"/>'),
+  close: I('<path d="M6 6l12 12M18 6L6 18"/>'),
+  back: I('<path d="M15 5l-7 7 7 7"/>'),
+  plus: I('<path d="M12 5v14M5 12h14"/>'),
+  trash: I('<path d="M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13"/>'),
+  ext: I('<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'),
+  send: I('<path d="M4 12l16-8-6 16-2.5-6.5z"/>'),
+  file: I('<path d="M14 3H6.5a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h5M8.5 13h7M8.5 16.5h5"/>'),
+  spark: I('<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'),
+};
+const sayBtn = (text, cls = '', rate = '') => (TTS.ok ? `<button class="say ${cls}" data-act="say" data-text="${esc(stripMarks(text))}"${rate ? ` data-rate="${rate}"` : ''} aria-label="Ouvir">${IC.speaker}</button>` : '');
+
+/* ================= state ================= */
+const APP_VERSION = '2.0.0';
+const DEFAULT_SETTINGS = { sessionSize: 15, newPerSession: 8, about: '', autoSpeak: true };
+const S = {
+  loaded: false, aiBlocked: false,
+  lessons: new Map(), tomb: {}, progress: {},
+  stats: { d: {} }, settings: { ...DEFAULT_SETTINGS }, ai: {},
+  meta: {}, outbox: null,
+  items: [], byGid: new Map(), lessonList: [], latest: null, second: null,
+  tab: lsGet('tab', 'home'), lessonOpen: null,
+  filters: { q: '', lesson: 'all', band: 'all', sort: 'weak' },
+  syncing: false, syncAgain: false, syncError: '',
+};
+const TABS = [
+  ['home', 'Hoje', IC.home], ['listen', 'Ouvir', IC.listen], ['chat', 'Conversar', IC.chat],
+  ['words', 'Palavras', IC.words], ['lessons', 'Aulas', IC.lessons],
+];
+const connected = () => !!(S.meta && S.meta.b && S.meta.k);
+const aiOn = () => connected() && S.meta.hasKey !== false && !S.aiBlocked;
+function aiNotice() {
+  if (!connected()) return 'Para usar a IA, conecte o app à sua planilha em Ajustes.';
+  if (S.meta.hasKey === false) return 'A chave do Gemini ainda não foi configurada. Na planilha, use o menu Fichário > 2. Configurar chave do Gemini.';
+  if (S.aiBlocked) return 'A IA está indisponível agora.';
+  return '';
+}
+const lessonName = (L) => (L && L.num ? 'Aula ' + L.num : (L && L.title) || 'Aula');
+const lessonId = (num, date) => (num ? 'L' + String(num).padStart(3, '0') : 'D' + String(date || dayKey()).replace(/-/g, ''));
+const splitGid = (gid) => { const k = gid.indexOf(':'); return [gid.slice(0, k), gid.slice(k + 1)]; };
+
+/* ================= reforço engine ================= */
+const W = { intro: 0, rec: 10, pro_mc: 12, lis_word: 12, lis_mean: 14, cloze_mc: 12, type: 20, cloze_type: 20, dict_word: 18, dict_sent: 24, use: 28, chat: 16, drill_mc: 12, drill_type: 20, drill_listen: 14 };
+const MC = new Set(['rec', 'pro_mc', 'lis_word', 'lis_mean', 'cloze_mc', 'drill_mc', 'drill_listen']);
+const MC_CAP = 65;
+function retention(p, t = now()) {
+  if (!p || !p.lr) return 1;
+  const days = Math.max(0, (t - p.lr) / DAY);
+  return 1 / (1 + days / (9 * Math.max(0.3, p.st || 0.5)));
+}
+function reforco(p, t = now()) {
+  if (!p || !p.n) return 0;
+  return Math.round(clamp((p.s || 0) * (0.35 + 0.65 * retention(p, t)), 0, 100));
+}
+function bandOf(p, t = now()) {
+  if (!p || !p.n) return 'new';
+  const r = reforco(p, t);
+  return r < 40 ? 'weak' : r < 70 ? 'learn' : r < 85 ? 'near' : 'done';
+}
+const BANDS = [['new', 'Nova'], ['weak', 'Fraca'], ['learn', 'Aprendendo'], ['near', 'Quase lá'], ['done', 'Dominada']];
+const BAND_LABEL = Object.fromEntries(BANDS);
+const isNew = (it) => !it.p || !it.p.n;
+function isDue(p, t = now()) { if (!p || !p.n) return false; return (t - p.lr) / DAY >= (p.st || 0.5); }
+function dueIn(p, t = now()) { if (!p || !p.n) return 0; return (p.st || 0.5) - (t - p.lr) / DAY; }
+function applyAnswer(p0, type, q, t = now()) {
+  const p = { s: 0, st: 0.5, lr: 0, n: 0, ok: 0, ko: 0, str: 0, ...(p0 || {}) };
+  if (type === 'intro') return { ...p, seen: t };
+  const base = p.n ? reforco(p, t) : 0;
+  const hours = p.n && p.lr ? (t - p.lr) / 3.6e6 : 0;
+  const w = W[type] ?? 12;
+  let s = base; let st = p.st || 0.5;
+  if (q >= 1) {
+    const bonus = 1 + Math.min(1, hours / 48) * 0.5;
+    s = base + w * (1 - base / 200) * bonus;
+    if (MC.has(type)) s = Math.max(base, Math.min(MC_CAP, s));
+    if (hours >= 12) st = Math.min(180, Math.max(1, st) * (1.5 + (Math.min(100, s) / 100) * 1.5));
+    else st = Math.min(Math.max(st, 1), st + 0.3);
+    p.ok += 1; p.str += 1;
+  } else if (q > 0) {
+    s = base + w * 0.35 * (1 - base / 200);
+    if (MC.has(type)) s = Math.max(base, Math.min(MC_CAP, s));
+    p.str = 0;
+  } else {
+    s = Math.max(0, base - (12 + base * 0.3));
+    st = Math.max(0.3, st * 0.45);
+    p.ko += 1; p.str = 0;
+  }
+  s = clamp(s, 0, 100);
+  return { ...p, s: Math.round(s * 10) / 10, st: Math.round(st * 100) / 100, lr: t, n: p.n + 1, last: q >= 1 ? 1 : q > 0 ? 0.5 : 0 };
+}
+function meterHTML(p, t = now(), showPct = true) {
+  const b = bandOf(p, t); const r = reforco(p, t); const on = !p || !p.n ? 0 : Math.max(1, Math.ceil(r / 20));
+  let segs = ''; for (let k = 0; k < 5; k++) segs += `<i class="${k < on ? 'on' : ''}"></i>`;
+  return `<span class="meter ${b}" title="${esc(BAND_LABEL[b])}: ${r}%" aria-label="Reforço ${r}%">${segs}</span>${showPct ? `<span class="pct">${!p || !p.n ? '—' : r + '%'}</span>` : ''}`;
+}
+function avgReforco(items, t = now()) { if (!items.length) return 0; return Math.round(items.reduce((a, i) => a + reforco(i.p, t), 0) / items.length); }
+function bandCounts(items, t = now()) { const c = { new: 0, weak: 0, learn: 0, near: 0, done: 0 }; for (const i of items) c[bandOf(i.p, t)]++; return c; }
+
+/* ================= data model ================= */
+function buildItems() {
+  const ls = [...S.lessons.entries()].map(([id, l]) => ({ ...l, id }));
+  ls.sort((a, b) => String(a.date || '').localeCompare(String(b.date || '')) || (a.num || 0) - (b.num || 0));
+  S.lessonList = ls;
+  S.latest = ls.length ? ls[ls.length - 1].id : null;
+  S.second = ls.length > 1 ? ls[ls.length - 2].id : null;
+  const items = [];
+  for (const L of ls) for (const it of (Array.isArray(L.items) ? L.items : [])) {
+    if (!it || !it.id || !it.en) continue;
+    items.push({ ...it, gid: L.id + ':' + it.id, lid: L.id, lnum: L.num, p: (S.progress[L.id] || {})[it.id] || null });
+  }
+  S.items = items;
+  S.byGid = new Map(items.map((i) => [i.gid, i]));
+}
+function answersFor(it) {
+  const set = new Set();
+  const add = (v) => { const n = norm(stripMarks(v)); if (n) { set.add(n); set.add(stripLead(n)); } };
+  (it.alt || []).forEach(add);
+  String(stripMarks(it.en)).split(/\s*[\/,;]\s*/).forEach(add);
+  add(it.en);
+  if (it.cl) add(it.cl);
+  return [...set];
+}
+const HOMO = [['son', 'sun'], ['meat', 'meet'], ['sea', 'see'], ['write', 'right'], ['hear', 'here'], ['know', 'no'], ['two', 'too', 'to'], ['for', 'four'], ['week', 'weak'], ['buy', 'by', 'bye'], ['their', 'there'], ['flour', 'flower'], ['road', 'rode'], ['hour', 'our']];
+function soundsAlike(a, b) {
+  const pa = norm(a.pron || '').split(' ')[0]; const pb = norm(b.pron || '').split(' ')[0];
+  if (pa && pa === pb) return true;
+  const x = norm(stripMarks(a.en)); const y = norm(stripMarks(b.en));
+  return HOMO.some((g) => g.includes(x) && g.includes(y));
+}
+
+/* ================= local storage (IndexedDB) ================= */
+const IDB = {
+  db: null,
+  open() {
+    return new Promise((res) => {
+      let req;
+      try { req = indexedDB.open('fichario', 1); } catch (e) { res(null); return; }
+      req.onupgradeneeded = () => { try { req.result.createObjectStore('kv'); } catch (e) { /* exists */ } };
+      req.onsuccess = () => { IDB.db = req.result; res(req.result); };
+      req.onerror = () => res(null);
+      req.onblocked = () => res(null);
+      setTimeout(() => res(IDB.db), 4000);
+    });
+  },
+  get(key) {
+    return new Promise((res) => {
+      if (!IDB.db) { res(lsGet('kv:' + key, undefined)); return; }
+      try { const r = IDB.db.transaction('kv', 'readonly').objectStore('kv').get(key); r.onsuccess = () => res(r.result); r.onerror = () => res(undefined); }
+      catch (e) { res(undefined); }
+    });
+  },
+  set(key, val) {
+    return new Promise((res) => {
+      if (!IDB.db) { lsSet('kv:' + key, val); res(); return; }
+      try { const tx = IDB.db.transaction('kv', 'readwrite'); tx.objectStore('kv').put(val, key); tx.oncomplete = () => res(); tx.onerror = () => res(); tx.onabort = () => res(); }
+      catch (e) { res(); }
+    });
+  },
+};
+const emptyOutbox = () => ({ lessons: {}, dels: {}, progress: {}, stats: {}, settings: null, ai: {} });
+function normOutbox(b) { const e = emptyOutbox(); if (!b || typeof b !== 'object') return e; for (const k of Object.keys(e)) if (b[k]) e[k] = b[k]; return e; }
+function outboxSize(b = S.outbox) { return Object.keys(b.lessons).length + Object.keys(b.dels).length + Object.keys(b.progress).length + Object.keys(b.stats).length + (b.settings ? 1 : 0) + Object.keys(b.ai).length; }
+async function loadLocal() {
+  await IDB.open();
+  const st = (await IDB.get('state')) || {};
+  S.lessons = new Map(Object.entries(st.lessons || {}));
+  S.tomb = st.tomb || {};
+  S.progress = st.progress || {};
+  S.stats = st.stats && st.stats.d ? st.stats : { d: {} };
+  S.settings = { ...DEFAULT_SETTINGS, ...(st.settings || {}) };
+  S.ai = st.ai || {};
+  S.meta = (await IDB.get('meta')) || {};
+  S.outbox = normOutbox(await IDB.get('outbox'));
+}
+let persistTimer = 0;
+function persist(immediate = false) {
+  clearTimeout(persistTimer);
+  const run = () => {
+    IDB.set('state', { lessons: Object.fromEntries(S.lessons), tomb: S.tomb, progress: S.progress, stats: S.stats, settings: S.settings, ai: S.ai });
+    IDB.set('meta', S.meta); IDB.set('outbox', S.outbox);
+  };
+  if (immediate) run(); else persistTimer = setTimeout(run, 350);
+}
+let renderQueued = false;
+function dataChanged() {
+  buildItems();
+  if (renderQueued) return; renderQueued = true;
+  requestAnimationFrame(() => { renderQueued = false; liveRender(); });
+}
+function updateSync() {
+  const el = $('#sync'); if (!el) return;
+  let txt = ''; let cls = 'sync'; let title = '';
+  if (!connected()) { txt = 'sem planilha'; cls += ' err'; title = 'Os dados ficam só neste aparelho. Conecte à planilha em Ajustes.'; }
+  else if (S.syncing) { txt = 'sincronizando…'; }
+  else if (!navigator.onLine) { txt = 'offline'; title = 'Sem internet: o progresso fica guardado e sincroniza depois.'; }
+  else if (S.syncError) { txt = 'sem sincronizar'; cls += ' err'; title = syncErrText(S.syncError); }
+  else if (outboxSize()) { txt = 'salvando…'; }
+  el.textContent = txt; el.className = cls; el.title = title;
+  el.setAttribute('data-act', 'settings');
+}
+function syncErrText(code) {
+  if (code === 'unauthorized') return 'O código de acesso não foi aceito. Conecte de novo pelo link da planilha.';
+  if (code === 'bad_response') return 'O servidor respondeu de um jeito inesperado. Confira se o app da Web está publicado com acesso para qualquer pessoa.';
+  if (code === 'network') return 'Não consegui falar com o servidor. Vou tentar de novo.';
+  return 'A última sincronização falhou (' + code + '). Vou tentar de novo.';
+}
+
+/* ---------- writes (local first, then outbox) ---------- */
+function markDirty(render = true) { persist(); scheduleSync(); if (render) dataChanged(); else updateSync(); }
+async function saveLesson(id, data) {
+  const d = { ...data, u: now() };
+  S.lessons.set(id, d); delete S.tomb[id];
+  S.outbox.lessons[id] = d; delete S.outbox.dels[id];
+  markDirty();
+}
+async function patchLesson(id, patch) { const cur = S.lessons.get(id); if (!cur) return; await saveLesson(id, { ...cur, ...patch }); }
+async function deleteLesson(id) {
+  const t = now();
+  S.lessons.delete(id); delete S.progress[id]; S.tomb[id] = t;
+  delete S.outbox.lessons[id]; S.outbox.dels[id] = t;
+  for (const g of Object.keys(S.outbox.progress)) if (g.startsWith(id + ':')) delete S.outbox.progress[g];
+  markDirty();
+}
+function queueProgress(gid, entry) {
+  const [lid, wid] = splitGid(gid);
+  const e = { ...entry, u: now() };
+  (S.progress[lid] = S.progress[lid] || {})[wid] = e;
+  const it = S.byGid.get(gid); if (it) it.p = e;
+  S.outbox.progress[gid] = e;
+  markDirty(false);
+}
+async function resetProgress(gid) { queueProgress(gid, { s: 0, st: 0.5, lr: 0, n: 0, ok: 0, ko: 0, str: 0 }); }
+function bumpStats(ok, ms) {
+  const k = dayKey(); S.stats.d = S.stats.d || {};
+  const cur = S.stats.d[k] || { n: 0, ok: 0, ms: 0 };
+  const e = { n: cur.n + 1, ok: cur.ok + (ok ? 1 : 0), ms: cur.ms + Math.min(90000, Math.max(0, ms || 0)) };
+  S.stats.d[k] = e; S.outbox.stats[k] = e;
+  markDirty(false);
+}
+async function saveSettings(patch) {
+  S.settings = { ...S.settings, ...patch, u: now() };
+  S.outbox.settings = S.settings;
+  markDirty();
+}
+async function saveAi(name, data) {
+  const d = { ...data, u: now() };
+  S.ai[name] = d; S.outbox.ai[name] = d;
+  markDirty(false);
+}
+async function loadAi(name) { return S.ai[name] || null; }
+
+/* ---------- server (Google Apps Script) ---------- */
+const validBackend = (u) => /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(u) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?\//.test(u);
+async function api(action, payload = {}, opts = {}) {
+  const url = S.meta.b; const k = S.meta.k;
+  if (!url || !k) throw { code: 'no_backend', message: 'App não conectado à planilha.' };
+  let res;
+  try {
+    res = await fetch(url, {
+      method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ ...payload, a: action, k, v: APP_VERSION }), redirect: 'follow', cache: 'no-store', signal: opts.signal,
+    });
+  } catch (e) {
+    if (e && e.name === 'AbortError') throw { code: 'cancelled' };
+    throw { code: 'network', message: String(e && e.message || e) };
+  }
+  let data;
+  try { data = await res.json(); } catch (e) { throw { code: 'bad_response', message: 'HTTP ' + res.status }; }
+  if (!data || data.ok === false) throw (data && data.error) || { code: 'server' };
+  return data;
+}
+let syncTimer = 0;
+function scheduleSync(ms = 2500) { if (!connected()) return; clearTimeout(syncTimer); syncTimer = setTimeout(() => syncNow('auto'), ms); }
+function snapOutbox() { const b = S.outbox; return { lessons: { ...b.lessons }, dels: { ...b.dels }, progress: { ...b.progress }, stats: { ...b.stats }, settings: b.settings, ai: { ...b.ai } }; }
+function clearSent(sent) {
+  const b = S.outbox;
+  for (const key of ['lessons', 'dels', 'progress', 'stats', 'ai']) for (const id of Object.keys(sent[key])) if (b[key][id] === sent[key][id]) delete b[key][id];
+  if (sent.settings && b.settings === sent.settings) b.settings = null;
+}
+function pushPayload(sent) {
+  return {
+    lessons: Object.entries(sent.lessons).map(([id, data]) => ({ id, data })),
+    dels: Object.entries(sent.dels).map(([id, t]) => ({ id, t })),
+    progress: Object.entries(sent.progress).map(([gid, e]) => { const it = S.byGid.get(gid); return { gid, e, en: it ? stripMarks(it.en) : '', pt: it ? it.pt : '', aula: it ? (it.lnum || '') : '' }; }),
+    stats: sent.stats, settings: sent.settings, ai: sent.ai,
+  };
+}
+function mergePull(r) {
+  const b = S.outbox;
+  for (const L of r.lessons || []) {
+    if (!L || !L.id || b.lessons[L.id] || b.dels[L.id]) continue;
+    if (L.del) { if (S.lessons.has(L.id)) { S.lessons.delete(L.id); delete S.progress[L.id]; } S.tomb[L.id] = L.upd || now(); continue; }
+    const cur = S.lessons.get(L.id);
+    if (L.data && (!cur || (L.data.u || 0) >= (cur.u || 0))) { S.lessons.set(L.id, L.data); delete S.tomb[L.id]; }
+  }
+  for (const P of r.progress || []) {
+    if (!P || !P.gid || !P.e || b.progress[P.gid]) continue;
+    const [lid, wid] = splitGid(P.gid); if (!S.lessons.has(lid)) continue;
+    const cur = (S.progress[lid] || {})[wid];
+    if (!cur || (P.e.u || 0) >= (cur.u || 0)) (S.progress[lid] = S.progress[lid] || {})[wid] = P.e;
+  }
+  for (const [day, e] of Object.entries(r.stats || {})) {
+    if (b.stats[day]) continue; const cur = S.stats.d[day];
+    if (!cur || (e.n || 0) > (cur.n || 0)) S.stats.d[day] = e;
+  }
+  if (r.settings && !b.settings && (r.settings.u || 0) >= (S.settings.u || 0)) S.settings = { ...DEFAULT_SETTINGS, ...r.settings };
+  for (const [name, d] of Object.entries(r.ai || {})) {
+    if (!d || b.ai[name]) continue; const cur = S.ai[name];
+    if (!cur || (d.u || 0) >= (cur.u || 0)) S.ai[name] = d;
+  }
+}
+async function syncNow(reason) {
+  if (!connected()) { updateSync(); return false; }
+  if (S.syncing) { S.syncAgain = true; return false; }
+  clearTimeout(syncTimer);
+  S.syncing = true; updateSync();
+  let ok = false;
+  try {
+    if (outboxSize()) {
+      const sent = snapOutbox();
+      await api('push', pushPayload(sent));
+      clearSent(sent); persist();
+    }
+    const since = S.meta.since ? Math.max(0, S.meta.since - 15000) : 0;
+    const r = await api('pull', { since });
+    mergePull(r);
+    Object.assign(S.meta, { since: r.time, lastSync: now(), hasKey: !!r.hasKey, sheetName: r.sheetName || S.meta.sheetName, sheetUrl: r.sheetUrl || S.meta.sheetUrl });
+    S.syncError = ''; ok = true;
+  } catch (e) {
+    S.syncError = (e && e.code) || 'network';
+    if (reason === 'manual' || reason === 'connect') toast(syncErrText(S.syncError), 4200);
+    if (S.syncError === 'network' || S.syncError === 'server' || S.syncError === 'bad_response') scheduleSync(30000);
+  } finally {
+    S.syncing = false; persist(); updateSync(); dataChanged();
+    if (S.syncAgain) { S.syncAgain = false; scheduleSync(800); }
+  }
+  return ok;
+}
+async function connectBackend(url, token) {
+  url = String(url || '').trim(); token = String(token || '').trim();
+  if (!validBackend(url)) throw { code: 'bad_url', message: 'O endereço precisa ser o do app da Web do Apps Script (termina em /exec).' };
+  if (token.length < 16) throw { code: 'bad_token', message: 'O código de acesso parece incompleto.' };
+  const prev = { b: S.meta.b, k: S.meta.k };
+  S.meta.b = url; S.meta.k = token;
+  try {
+    const r = await api('ping');
+    const changedServer = prev.b !== url;
+    Object.assign(S.meta, { hasKey: !!r.hasKey, sheetName: r.sheetName, sheetUrl: r.sheetUrl });
+    if (changedServer) S.meta.since = 0;
+    persist(true);
+    await syncNow('connect');
+    return r;
+  } catch (e) { S.meta.b = prev.b; S.meta.k = prev.k; persist(true); throw e; }
+}
+function disconnectBackend() { S.meta = {}; persist(true); updateSync(); }
+window.addEventListener('online', () => { updateSync(); scheduleSync(500); });
+window.addEventListener('offline', () => updateSync());
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') { persist(true); if (outboxSize()) syncNow('hide'); }
+  else if (S.loaded) syncNow('focus');
+});
+/* ================= shell ================= */
+function renderShell() {
+  const tabs = (cls) => TABS.map(([id, label, icon]) => `<button class="tab" data-act="tab" data-tab="${id}"${S.tab === id ? ' aria-current="page"' : ''}>${icon}<span>${label}</span></button>`).join('');
+  $('#topnav').innerHTML = tabs(); $('#tabbar').innerHTML = tabs();
+}
+function isTyping() { const a = document.activeElement; return !!a && /^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName) && $('#view').contains(a); }
+function liveRender() {
+  if (!S.loaded) return;
+  if (['home', 'words', 'lessons'].includes(S.tab) && !isTyping()) render();
+  else if (S.tab === 'listen') refreshListenLight();
+  updateSync();
+}
+function setTab(tab) {
+  if (!TABS.some((t) => t[0] === tab)) tab = 'home';
+  if (S.tab === 'listen' && tab !== 'listen') plStop();
+  S.tab = tab; lsSet('tab', tab); if (tab !== 'lessons') S.lessonOpen = null;
+  renderShell(); render(); window.scrollTo(0, 0);
+}
+function render() {
+  const v = $('#view');
+  if (!S.loaded) { v.innerHTML = `<div class="empty"><p class="thinking">Carregando suas aulas…</p></div>`; return; }
+  let html = '';
+  if (S.tab === 'home') html = renderHome();
+  else if (S.tab === 'words') html = renderWords();
+  else if (S.tab === 'lessons') html = S.lessonOpen && S.lessons.has(S.lessonOpen) ? renderLessonDetail(S.lessonOpen) : renderLessons();
+  else if (S.tab === 'listen') html = renderListen();
+  else if (S.tab === 'chat') html = renderChat();
+  const note = !connected() && S.tab === 'home' && S.lessonList.length
+    ? `<div class="notice warn ex-row" style="margin-bottom:14px;justify-content:space-between"><span>Seus dados estão só neste aparelho. Conecte à sua planilha para sincronizar com o celular e usar a IA.</span><button class="btn small" data-act="settings">Conectar</button></div>` : '';
+  v.innerHTML = note + html;
+  if (S.tab === 'words') renderWordList();
+  if (S.tab === 'chat') afterChatRender();
+  if (S.tab === 'listen') afterListenRender();
+  updateSync();
+}
+function emptyState() {
+  if (!connected()) {
+    return `<section class="empty">
+      <p class="label">Comece por aqui</p>
+      <h1>Conecte o app à sua planilha</h1>
+      <p class="meta">Abra no computador o link de conexão que aparece na planilha (menu Fichário > 3. Conectar aparelhos) ou leia o QR com o celular. Suas aulas e o progresso aparecem aqui e ficam sincronizados.</p>
+      <div class="row-actions"><button class="btn primary big" data-act="settings">Conectar à planilha</button><button class="btn" data-act="import">${IC.file} Enviar aula sem conectar</button></div>
+    </section>`;
+  }
+  return `<section class="empty">
+    <p class="label">Comece por aqui</p>
+    <h1>Envie o arquivo da sua última aula</h1>
+    <p class="meta">Depois de cada aula, envie o .docx que o professor mandou. O app separa as palavras, cria exemplos e monta os treinos.</p>
+    <button class="btn primary big" data-act="import">${IC.file} Enviar aula (.docx)</button>
+  </section>`;
+}
+/* ================= home ================= */
+function greeting() { const h = new Date().getHours(); return h < 12 ? 'Bom dia!' : h < 18 ? 'Boa tarde!' : 'Boa noite!'; }
+function todayLong() {
+  const d = new Date(); const wd = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'][d.getDay()];
+  const mo = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'][d.getMonth()];
+  return `${wd}, ${d.getDate()} de ${mo}`;
+}
+function streakInfo() {
+  const d = S.stats.d || {}; let streak = 0; const t = new Date();
+  const has = (dt) => (d[dayKey(dt.getTime())] || {}).n > 0;
+  const cur = new Date(t); if (!has(cur)) cur.setDate(cur.getDate() - 1);
+  while (has(cur)) { streak++; cur.setDate(cur.getDate() - 1); }
+  return streak;
+}
+function renderHome() {
+  if (!S.lessonList.length) return emptyState();
+  const t = now(); const items = S.items;
+  const idx = avgReforco(items, t); const c = bandCounts(items, t);
+  const due = items.filter((i) => isDue(i.p, t)).length;
+  const fresh = items.filter(isNew).length;
+  const L = S.lessons.get(S.latest); const Lid = S.latest;
+  const Litems = items.filter((i) => i.lid === Lid);
+  const size = Number(S.settings.sessionSize) || 15;
+  const est = Math.min(size, items.length - fresh + Math.min(Number(S.settings.newPerSession) || 8, fresh));
+  const dist = BANDS.map(([b, lbl]) => c[b] ? `<span style="flex:${c[b]};background:var(--b-${b})" title="${lbl}: ${c[b]}"></span>` : '').join('');
+  const legend = BANDS.map(([b, lbl]) => `<li><span class="dot ${b}"></span>${lbl} <b>${c[b]}</b></li>`).join('');
+  const nLessons = S.lessonList.length;
+  const links = (L.links || []).map((lk, k) => linkRow(Lid, lk, k)).join('');
+  const chips = Litems.map((i) => `<button class="chip" data-act="word" data-gid="${esc(i.gid)}"><span class="dot ${bandOf(i.p, t)}"></span>${hl(i.t === 'concept' ? i.en : i.en)}</button>`).join('');
+  const today = (S.stats.d || {})[dayKey()] || { n: 0, ok: 0 };
+  const streak = streakInfo();
+  let strip = '';
+  for (let k = 13; k >= 0; k--) {
+    const dt = new Date(); dt.setDate(dt.getDate() - k); const e = (S.stats.d || {})[dayKey(dt.getTime())];
+    const n = e ? e.n : 0; const lv = n === 0 ? '' : n < 15 ? 'l1' : n < 40 ? 'l2' : 'l3';
+    strip += `<span class="${lv}${k === 0 ? ' today' : ''}" title="${dt.getDate()}/${dt.getMonth() + 1}: ${n} respostas"></span>`;
+  }
+  const practiced = items.filter((i) => !isNew(i)).sort((a, b) => reforco(a.p, t) - reforco(b.p, t)).slice(0, 6);
+  const weakList = practiced.length ? practiced : Litems.filter((i) => i.t !== 'concept').slice(0, 6);
+  const weakRows = weakList.map((i) => `<li><button class="mini-row" data-act="word" data-gid="${esc(i.gid)}"><span class="w">${hl(i.en)}<small>${esc(i.t === 'concept' ? 'gramática' : i.pt)}</small></span>${meterHTML(i.p, t)}</button></li>`).join('');
+  return `<section class="home">
+    <div class="stack">
+      <div class="hello"><p class="label">${todayLong()}</p><h1>${greeting()}</h1></div>
+      <section class="panel" aria-labelledby="idx-t">
+        <div class="index-top">
+          <div><p class="label" id="idx-t">Índice de reforço</p><p class="big">${idx}<small>%</small></p></div>
+          <p class="meta">${items.length} itens em ${nLessons} ${nLessons === 1 ? 'aula' : 'aulas'}</p>
+        </div>
+        <div class="distbar" role="img" aria-label="Distribuição por faixa">${dist}</div>
+        <ul class="legend">${legend}</ul>
+        <button class="linkish" data-act="help">Como funciona o índice?</button>
+      </section>
+      <section class="panel cta">
+        <div class="cta-row">
+          <div><h2>Treino do dia</h2>
+            <p class="meta">${est} ${est === 1 ? 'palavra' : 'palavras'} · começa pela ${esc(lessonName(L))}</p>
+            <p class="meta">${due} ${due === 1 ? 'revisão pendente' : 'revisões pendentes'} · ${fresh} ${fresh === 1 ? 'nova' : 'novas'}</p></div>
+          <button class="btn primary big" data-act="start" data-mode="daily">Começar</button>
+        </div>
+        <div class="more-train"><p class="label">Outros treinos</p>
+          <div class="chips">
+            <button class="chip" data-act="start" data-mode="lesson" data-lid="${esc(Lid)}">Só a ${esc(lessonName(L))}</button>
+            <button class="chip" data-act="start" data-mode="weak">Palavras fracas</button>
+            ${TTS.ok ? '<button class="chip" data-act="start" data-mode="listen">Só escuta</button>' : ''}
+            ${aiOn() ? '<button class="chip" data-act="start" data-mode="write">Escrever frases</button>' : ''}
+          </div></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><p class="label">Aula mais recente</p><span class="lesson-tag">CLASS ${esc(L.num || '')} · ${esc(fmtDate(L.date).toUpperCase())}</span></div>
+        <div class="panel-head"><h2>${esc(lessonName(L))}</h2><span class="meta">reforço médio <b class="mono">${avgReforco(Litems, t)}%</b></span></div>
+        <div class="chips">${chips}</div>
+        ${links ? `<div class="fgroup"><p class="label">Links da aula</p><ul class="linklist">${links}</ul></div>` : ''}
+        <div class="row-actions">
+          <button class="btn primary" data-act="start" data-mode="lesson" data-lid="${esc(Lid)}">Treinar esta aula</button>
+          <button class="btn" data-act="open-lesson" data-lid="${esc(Lid)}">Ver aula</button>
+          <button class="btn ghost" data-act="import">${IC.plus} Nova aula</button>
+        </div>
+      </section>
+    </div>
+    <aside class="stack">
+      <section class="panel">
+        <p class="label">Atividade</p>
+        <p class="streak">${streak}<small>${streak === 1 ? 'dia seguido' : 'dias seguidos'}</small></p>
+        <div class="strip" aria-label="Últimos 14 dias">${strip}</div>
+        <p class="meta">Hoje: ${today.n} ${today.n === 1 ? 'resposta' : 'respostas'}${today.n ? ` · ${Math.round((today.ok / today.n) * 100)}% de acerto` : ''}</p>
+      </section>
+      <section class="panel">
+        <p class="label">${practiced.length ? 'Precisam de reforço' : 'Para começar'}</p>
+        <ul class="mini-list">${weakRows}</ul>
+      </section>
+      <section class="panel">
+        <p class="label">Usar as palavras</p>
+        <div class="row-actions">
+          <button class="btn" data-act="tab" data-tab="listen">${IC.listen} Ouvir</button>
+          <button class="btn" data-act="tab" data-tab="chat">${IC.chat} Conversar</button>
+        </div>
+        <p class="meta">Textos, diálogos e conversa usando as palavras da ${esc(lessonName(L))} e das aulas anteriores.</p>
+      </section>
+    </aside>
+  </section>`;
+}
+function linkRow(lid, lk, k) {
+  let host = ''; try { host = new URL(lk.url).hostname.replace(/^www\./, ''); } catch (e) { host = ''; }
+  return `<li class="linkrow${lk.done ? ' done' : ''}">
+    <input type="checkbox" id="lk-${esc(lid)}-${k}" data-act="link-done" data-lid="${esc(lid)}" data-k="${k}" ${lk.done ? 'checked' : ''} aria-label="Marcar como feito">
+    <a href="${esc(lk.url)}" target="_blank" rel="noopener noreferrer">${esc(lk.title || host || lk.url)}</a>
+    <span class="muted" aria-hidden="true">${IC.ext.replace('<svg', '<svg width="18" height="18"')}</span>
+  </li>`;
+}
+
+/* ================= words ================= */
+function renderWords() {
+  const f = S.filters;
+  const lessonOpts = S.lessonList.slice().reverse().map((L) => `<option value="${esc(L.id)}"${f.lesson === L.id ? ' selected' : ''}>${esc(lessonName(L))}</option>`).join('');
+  const bandOpts = BANDS.map(([b, l]) => `<option value="${b}"${f.band === b ? ' selected' : ''}>${l}</option>`).join('');
+  return `<div class="screen-head"><div><h1>Palavras</h1><p class="meta" id="wcount"></p></div>
+      ${S.lessonList.length ? `<button class="btn" data-act="start" data-mode="weak">Treinar as mais fracas</button>` : ''}</div>
+    <div class="filters">
+      <input class="field sm" id="f-q" type="search" placeholder="Buscar em inglês ou português" value="${esc(f.q)}" aria-label="Buscar">
+      <select class="field sm" id="f-lesson" aria-label="Aula"><option value="all">Todas as aulas</option>${lessonOpts}</select>
+      <select class="field sm" id="f-band" aria-label="Faixa"><option value="all">Todas as faixas</option>${bandOpts}</select>
+      <select class="field sm" id="f-sort" aria-label="Ordenar">
+        <option value="weak"${f.sort === 'weak' ? ' selected' : ''}>Mais fracas primeiro</option>
+        <option value="recent"${f.sort === 'recent' ? ' selected' : ''}>Aula mais recente</option>
+        <option value="az"${f.sort === 'az' ? ' selected' : ''}>A–Z</option>
+      </select>
+    </div>
+    <ul class="wordlist" id="wordlist"></ul>`;
+}
+function renderWordList() {
+  const f = S.filters; const t = now(); const q = norm(f.q);
+  let list = S.items.filter((i) => (f.lesson === 'all' || i.lid === f.lesson) && (f.band === 'all' || bandOf(i.p, t) === f.band) && (!q || norm(stripMarks(i.en) + ' ' + i.pt).includes(q)));
+  if (f.sort === 'weak') list.sort((a, b) => (isNew(a) - isNew(b)) || reforco(a.p, t) - reforco(b.p, t));
+  else if (f.sort === 'recent') { const order = new Map(S.lessonList.map((L, k) => [L.id, k])); list.sort((a, b) => order.get(b.lid) - order.get(a.lid)); }
+  else list.sort((a, b) => norm(stripMarks(a.en)).localeCompare(norm(stripMarks(b.en))));
+  const el = $('#wordlist'); if (!el) return;
+  el.innerHTML = list.length ? list.map((i) => `<li><button class="wrow" data-act="word" data-gid="${esc(i.gid)}">
+      <span class="w-en">${hl(i.en)}${i.t === 'concept' ? '<span class="w-concept">gramática</span>' : ''}</span>
+      <span class="w-side"><span class="lesson-tag">${esc(i.lnum || '')}</span>${meterHTML(i.p, t)}</span>
+      <span class="w-pt">${esc(i.t === 'concept' ? (i.pt || '').slice(0, 90) + ((i.pt || '').length > 90 ? '…' : '') : i.pt)}</span>
+    </button></li>`).join('') : `<li><p class="meta" style="padding:16px">Nenhum item com esses filtros.</p></li>`;
+  const c = $('#wcount'); if (c) c.textContent = `${list.length} de ${S.items.length} itens`;
+}
+
+/* ================= lessons ================= */
+function renderLessons() {
+  const t = now();
+  const rows = S.lessonList.slice().reverse().map((L) => {
+    const its = S.items.filter((i) => i.lid === L.id);
+    return `<li><button class="lrow" data-act="open-lesson" data-lid="${esc(L.id)}">
+      <span class="lnum">${esc(L.num || '·')}</span>
+      <span class="t">${esc(lessonName(L))}${L.id === S.latest ? ' <span class="lesson-tag">MAIS RECENTE</span>' : ''}</span>
+      <span class="s">${esc(fmtDate(L.date))} · ${its.length} itens${(L.links || []).length ? ` · ${(L.links || []).length} link${(L.links || []).length > 1 ? 's' : ''}` : ''}</span>
+      <span class="r">${meterHTML(its.some((i) => !isNew(i)) ? { n: 1, s: avgReforco(its, t), lr: t, st: 999 } : null, t)}</span>
+    </button></li>`;
+  }).join('');
+  return `<div class="screen-head"><div><h1>Aulas</h1><p class="meta">Envie o arquivo depois de cada aula. A aula mais recente vira prioridade nos treinos.</p></div>
+      <button class="btn primary" data-act="import">${IC.plus} Nova aula</button></div>
+    ${rows ? `<ul class="lessons">${rows}</ul>` : emptyState()}`;
+}
+function renderLessonDetail(lid) {
+  const L = S.lessons.get(lid); const t = now();
+  const its = S.items.filter((i) => i.lid === lid);
+  const words = its.filter((i) => i.t !== 'concept'); const concepts = its.filter((i) => i.t === 'concept');
+  const row = (i) => `<li><button class="wrow" data-act="word" data-gid="${esc(i.gid)}"><span class="w-en">${hl(i.en)}</span><span class="w-side">${meterHTML(i.p, t)}</span><span class="w-pt">${esc(i.t === 'concept' ? i.pt : i.pt)}</span></button></li>`;
+  const texts = (L.texts || []).map((tx) => `<div class="fgroup"><div class="ex-row"><h3>${esc(tx.title || 'Texto')}</h3>${sayBtn((tx.lines || []).join('. '), 'sm')}</div><div class="textblock">${(tx.lines || []).map((l) => `<p>${hl(l)}</p>`).join('')}</div></div>`).join('');
+  const links = (L.links || []).map((lk, k) => linkRow(lid, lk, k) .replace('</li>', `<button class="icon-btn" data-act="link-del" data-lid="${esc(lid)}" data-k="${k}" aria-label="Remover link">${IC.trash}</button></li>`)).join('');
+  return `<div class="screen-head">
+      <div><button class="btn ghost small" data-act="close-lesson" style="justify-self:start;padding-left:4px">${IC.back} Aulas</button>
+      <h1>${esc(lessonName(L))}</h1><p class="meta">${esc(fmtDate(L.date))}${L.file ? ' · ' + esc(L.file) : ''} · reforço médio <b class="mono">${avgReforco(its, t)}%</b></p></div>
+      <div class="row-actions"><button class="btn primary" data-act="start" data-mode="lesson" data-lid="${esc(lid)}">Treinar esta aula</button>
+      <button class="btn" data-act="edit-lesson" data-lid="${esc(lid)}">Editar</button></div></div>
+    <div class="section-title"><h2>Palavras e expressões</h2><span class="meta">${words.length}</span></div>
+    <ul class="wordlist">${words.map(row).join('')}</ul>
+    ${concepts.length ? `<div class="section-title"><h2>Gramática e pronúncia</h2><span class="meta">${concepts.length}</span></div><ul class="wordlist">${concepts.map(row).join('')}</ul>` : ''}
+    ${texts ? `<div class="section-title"><h2>Textos da aula</h2></div><div class="panel">${texts}</div>` : ''}
+    <div class="section-title"><h2>Links</h2></div>
+    <div class="panel">
+      ${links ? `<ul class="linklist">${links}</ul>` : '<p class="meta">Nenhum link nesta aula.</p>'}
+      <form class="ex-row" data-form="add-link" data-lid="${esc(lid)}">
+        <input class="field sm" style="flex:1;min-width:200px" id="newlink-${esc(lid)}" type="url" inputmode="url" placeholder="Cole o link que o professor mandou" aria-label="Novo link">
+        <button class="btn" type="submit">${IC.plus} Adicionar</button>
+      </form>
+    </div>
+    ${L.raw ? `<div class="section-title"><h2>Arquivo original</h2></div><details class="raw panel"><summary>Ver o texto do arquivo</summary><pre>${esc(stripMarks(L.raw))}</pre></details>` : ''}
+    <div class="section-title"><span></span></div>
+    <div class="row-actions"><button class="btn danger" data-act="del-lesson" data-lid="${esc(lid)}">${IC.trash} Excluir aula</button></div>`;
+}
+
+/* ================= sheets ================= */
+function openSheet(html, cls = '') {
+  const w = $('#layer-sheet');
+  w.innerHTML = `<div class="sheet ${cls}" role="dialog" aria-modal="true">${html}</div>`;
+  w.hidden = false; document.body.style.overflow = 'hidden';
+  const f = w.querySelector('[autofocus]') || w.querySelector('.sheet'); if (f) { f.setAttribute('tabindex', f.getAttribute('tabindex') || '-1'); f.focus({ preventScroll: true }); }
+}
+function closeSheet() { const w = $('#layer-sheet'); w.hidden = true; w.innerHTML = ''; document.body.style.overflow = ''; IMP.ctl && IMP.ctl.abort(); }
+function sheetHead(title, sub = '') {
+  return `<div class="sheet-head"><div>${sub ? `<p class="label">${sub}</p>` : ''}<h2>${title}</h2></div><button class="icon-btn" data-act="close-sheet" aria-label="Fechar">${IC.close}</button></div>`;
+}
+function openWord(gid) {
+  const i = S.byGid.get(gid); if (!i) return;
+  const L = S.lessons.get(i.lid); const t = now(); const p = i.p;
+  const b = bandOf(p, t); const r = reforco(p, t);
+  let body = '';
+  if (i.t === 'concept') {
+    body = `<p style="font-size:17px">${esc(i.pt)}</p>
+      ${(i.examples || []).map((e) => `<div class="ex-row"><span class="ex-sent" style="font-size:19px">${hl(e)}</span>${sayBtn(e, 'sm')}</div>`).join('')}
+      <p class="label">Exercícios</p><ul class="mini-list">${(i.drills || []).map((d) => `<li><div class="mini-row" style="display:block"><span class="w" style="font-size:16px">${esc(d.q.replace('____', '[' + d.a[0] + ']'))}</span><small class="muted">${esc(d.pt || '')}</small></div></li>`).join('')}</ul>`;
+  } else {
+    body = `<p class="ex-mean">${esc(i.pt)}</p>
+      ${i.pron ? `<p class="pron">Pronúncia (professor): <b>${esc(i.pron)}</b></p>` : ''}
+      ${i.note ? `<p class="note">${esc(i.note)}</p>` : ''}
+      ${i.ex ? `<div class="fgroup"><div class="ex-row"><span class="ex-sent" style="font-size:20px">${markCl(i)}</span>${sayBtn(i.ex, 'sm')}${TTS.ok ? `<button class="btn small" data-act="say" data-text="${esc(i.ex)}" data-rate="0.65">devagar</button>` : ''}</div><p class="ex-sub">${esc(i.exPt || '')}</p></div>` : ''}`;
+  }
+  const hist = (p && p.h || []).slice().reverse().map((h) => `<li><div class="mini-row" style="display:block"><span class="w" style="font-size:16px">${esc(h.c || h.s)}</span><small class="muted">${esc(h.s !== h.c && h.c ? 'Você escreveu: ' + h.s : relDays(h.t))}</small></div></li>`).join('');
+  openSheet(`${sheetHead(`${hl(i.en)} ${i.t !== 'concept' ? sayBtn(i.en) : ''}`, `${esc(lessonName(L))} · ${esc(fmtDate(L && L.date))}`)}
+    ${body}
+    <div class="panel" style="box-shadow:none">
+      <div class="panel-head"><span class="band-pill"><span class="dot ${b}"></span>${BAND_LABEL[b]}</span><span class="ex-row">${meterHTML(p, t)}</span></div>
+      <dl class="kv">
+        <dt>Acertos</dt><dd class="mono">${p ? p.ok || 0 : 0}</dd>
+        <dt>Erros</dt><dd class="mono">${p ? p.ko || 0 : 0}</dd>
+        <dt>Último treino</dt><dd>${p && p.n ? relDays(p.lr) : 'ainda não treinada'}</dd>
+        <dt>Próxima revisão</dt><dd>${p && p.n ? inDays(dueIn(p, t)) : 'no próximo treino'}</dd>
+      </dl>
+    </div>
+    ${hist ? `<p class="label">Suas frases</p><ul class="mini-list">${hist}</ul>` : ''}
+    <div class="row-actions">
+      <button class="btn primary" data-act="start" data-mode="word" data-gid="${esc(gid)}">Treinar ${i.t === 'concept' ? 'este item' : 'esta palavra'}</button>
+      ${i.t !== 'concept' ? `<button class="btn" data-act="edit-word" data-gid="${esc(gid)}">Editar</button>` : ''}
+      ${p && p.n ? `<button class="btn ghost" data-act="reset-word" data-gid="${esc(gid)}">Zerar progresso</button>` : ''}
+    </div>`);
+}
+function markCl(i) {
+  const ex = i.ex || ''; const cl = i.cl && ex.includes(i.cl) ? i.cl : findCl(i);
+  if (!cl) return esc(ex);
+  const k = ex.indexOf(cl);
+  return esc(ex.slice(0, k)) + '<mark class="hl">' + esc(cl) + '</mark>' + esc(ex.slice(k + cl.length));
+}
+function findCl(i) {
+  const ex = i.ex || ''; if (!ex) return '';
+  if (i.cl && ex.includes(i.cl)) return i.cl;
+  const cands = answersFor(i).sort((a, b) => b.length - a.length);
+  const low = ex.toLowerCase();
+  for (const a of cands) {
+    const re = new RegExp('\\b' + a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/ /g, '\\s+') + '\\b', 'i');
+    const m = low.match(re); if (m) return ex.substr(m.index, m[0].length);
+  }
+  return '';
+}
+function openEditWord(gid) {
+  const i = S.byGid.get(gid); if (!i) return;
+  const f = (id, label, val, ph = '') => `<label class="fgroup"><span>${label}</span><input class="field sm" id="ew-${id}" value="${esc(val || '')}" placeholder="${esc(ph)}"></label>`;
+  openSheet(`${sheetHead('Editar palavra', esc(lessonName(S.lessons.get(i.lid))))}
+    <form class="fgroup" data-form="edit-word" data-gid="${esc(gid)}" style="gap:12px">
+      ${f('en', 'Inglês', i.en)}${f('pt', 'Português', i.pt)}
+      ${f('alt', 'Respostas aceitas (separe com /)', (i.alt || []).join(' / '), 'ex.: goal / target')}
+      ${f('pron', 'Pronúncia do professor', i.pron)}${f('note', 'Dica', i.note)}
+      ${f('ex', 'Frase de exemplo', i.ex)}${f('exPt', 'Tradução da frase', i.exPt)}
+      <div class="row-actions"><button class="btn primary" type="submit">Salvar</button><button class="btn ghost" type="button" data-act="word" data-gid="${esc(gid)}">Cancelar</button></div>
+    </form>`);
+}
+async function saveEditWord(form) {
+  const gid = form.dataset.gid; const i = S.byGid.get(gid); if (!i) return;
+  const L = S.lessons.get(i.lid); const v = (k) => $('#ew-' + k).value.trim();
+  if (!v('en') || !v('pt')) { toast('Preencha inglês e português.'); return; }
+  const items = (L.items || []).map((x) => {
+    if (x.id !== i.id) return x;
+    const nx = { ...x, en: v('en'), pt: v('pt'), pron: v('pron'), note: v('note'), ex: v('ex'), exPt: v('exPt') };
+    const alt = v('alt').split('/').map((s) => s.trim()).filter(Boolean); if (alt.length) nx.alt = alt; else delete nx.alt;
+    if (nx.ex && !(nx.cl && nx.ex.includes(nx.cl))) { const c = findCl({ ...nx, cl: '' }); if (c) nx.cl = c; else delete nx.cl; }
+    Object.keys(nx).forEach((k) => { if (nx[k] === '') delete nx[k]; });
+    return nx;
+  });
+  try { await saveLesson(i.lid, { ...L, items }); toast('Palavra salva.'); openWord(gid); }
+  catch (e) { toast('Não consegui salvar agora. Tente de novo.'); }
+}
+function openSettings() {
+  const st = S.settings;
+  const voices = TTS.voices.map((v) => `<option value="${esc(v.name)}"${TTS.voice && TTS.voice.name === v.name ? ' selected' : ''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('');
+  openSheet(`${sheetHead('Ajustes')}
+    <div class="fgroup"><p class="label">Áudio (neste aparelho)</p>
+      ${TTS.ok ? `<label class="fgroup"><span>Voz em inglês</span><select class="field sm" id="set-voice">${voices || '<option>Voz padrão do aparelho</option>'}</select></label>
+      <label class="fgroup"><span>Velocidade da fala: <b id="rate-v" class="mono">${TTS.rate.toFixed(2)}x</b></span><input type="range" id="set-rate" min="0.6" max="1.2" step="0.05" value="${TTS.rate}"></label>
+      <div class="row-actions"><button class="btn small" data-act="say" data-text="Hello! This is how I sound. See you soon!">${IC.speaker} Testar voz</button></div>
+      <label class="check"><input type="checkbox" id="set-auto" ${st.autoSpeak !== false ? 'checked' : ''}> Falar a palavra automaticamente nos exercícios</label>`
+    : '<p class="notice">Este navegador não tem leitura em voz alta. Os exercícios de escuta ficam desligados.</p>'}
+    </div>
+    <div class="grid2">
+      <label class="fgroup"><span>Palavras por treino</span><select class="field sm" id="set-size">${[10, 15, 20, 30].map((n) => `<option ${st.sessionSize == n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+      <label class="fgroup"><span>Palavras novas por treino (máx.)</span><select class="field sm" id="set-new">${[4, 6, 8, 12].map((n) => `<option ${st.newPerSession == n ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+    </div>
+    <label class="fgroup"><span>Sobre você (a IA usa isso para criar textos e conversas do seu dia a dia)</span><textarea class="field sm" id="set-about" rows="2" placeholder="Ex.: trabalho com TI, gosto de futebol, tenho dois filhos">${esc(st.about || '')}</textarea></label>
+    ${connectionHTML()}
+    <div class="fgroup"><p class="label">Backup e exportação</p>
+      <p class="meta">A planilha já guarda tudo. Se quiser uma cópia em arquivo, exporte aqui.</p>
+      <div class="row-actions"><button class="btn small" data-act="export-csv">Palavras (CSV)</button><button class="btn small" data-act="export-backup">Backup completo (JSON)</button>
+      <label class="btn small" style="cursor:pointer">Restaurar backup<input type="file" id="backup-file" accept=".json,application/json" hidden></label></div>
+    </div>
+    <p class="meta muted">Fichário de Inglês · versão ${APP_VERSION}</p>
+    <div class="row-actions"><button class="btn primary" data-act="save-settings">Salvar ajustes</button><button class="btn ghost" data-act="help">Como funciona o índice</button></div>`);
+  const r = $('#set-rate'); if (r) r.addEventListener('input', () => { $('#rate-v').textContent = Number(r.value).toFixed(2) + 'x'; TTS.rate = Number(r.value); });
+  const vs = $('#set-voice'); if (vs) vs.addEventListener('change', () => { const v = TTS.voices.find((x) => x.name === vs.value); if (v) { TTS.voice = v; lsSet('voice', v.name); } });
+  const bf = $('#backup-file'); if (bf) bf.addEventListener('change', () => { if (bf.files && bf.files[0]) importBackup(bf.files[0]); });
+}
+function connectionHTML() {
+  if (!connected()) {
+    return `<div class="fgroup" id="conn-box"><p class="label">Planilha (sincronização e IA)</p>
+      <p class="meta">O jeito mais fácil é abrir o link de conexão da planilha (menu Fichário > 3. Conectar aparelhos). Ou cole os dados aqui:</p>
+      <label class="fgroup"><span>Endereço do servidor (app da Web, termina em /exec)</span><input class="field sm" id="conn-url" inputmode="url" autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec"></label>
+      <label class="fgroup"><span>Código de acesso</span><input class="field sm" id="conn-k" autocomplete="off" spellcheck="false"></label>
+      <div class="row-actions"><button class="btn primary small" data-act="connect">Conectar</button></div>
+      <p class="meta" id="conn-msg" role="status"></p></div>`;
+  }
+  const m = S.meta;
+  return `<div class="fgroup" id="conn-box"><p class="label">Planilha (sincronização e IA)</p>
+    <p class="meta">Conectado à planilha ${m.sheetUrl ? `<a href="${esc(m.sheetUrl)}" target="_blank" rel="noopener">${esc(m.sheetName || 'Fichário')}</a>` : esc(m.sheetName || '')}.
+      Última sincronização: ${m.lastSync ? esc(relTime(m.lastSync)) : 'ainda não'}${outboxSize() ? ` · ${outboxSize()} alteração(ões) esperando envio` : ''}.</p>
+    <p class="meta">IA (Gemini): ${m.hasKey ? 'ativa' : '<b style="color:var(--red)">sem chave</b>: na planilha, menu Fichário > 2. Configurar chave do Gemini'}.</p>
+    ${S.syncError ? `<p class="notice warn">${esc(syncErrText(S.syncError))}</p>` : ''}
+    <div class="row-actions"><button class="btn small" data-act="sync-now">Sincronizar agora</button><button class="btn small" data-act="show-qr">Conectar outro aparelho</button><button class="btn ghost small" data-act="disconnect">Desconectar</button></div>
+    <div id="qr-box"></div></div>`;
+}
+function relTime(t) { const m = Math.round((now() - t) / 60000); if (m < 1) return 'agora há pouco'; if (m < 60) return 'há ' + m + ' min'; const h = Math.round(m / 60); if (h < 24) return 'há ' + h + ' h'; return relDays(t); }
+function setupLink() { const base = location.origin + location.pathname; return base + '#b=' + encodeURIComponent(S.meta.b) + '&k=' + encodeURIComponent(S.meta.k); }
+async function showQr() {
+  const box = $('#qr-box'); if (!box) return;
+  const link = setupLink();
+  box.innerHTML = `<div class="panel" style="box-shadow:none;justify-items:center;text-align:center"><div id="qr-img" style="width:220px;max-width:100%"></div>
+    <p class="meta">No celular, abra a câmera e aponte para o código. Depois, no navegador do celular, use "Adicionar à tela inicial".</p>
+    <div class="row-actions" style="justify-content:center"><button class="btn small" data-act="copy-link">Copiar link</button></div>
+    <p class="meta muted">O link contém o seu código de acesso. Não compartilhe.</p></div>`;
+  try {
+    if (!window.qrcode) await loadScript('qrcode.js');
+    const q = qrcode(0, 'M'); q.addData(link); q.make();
+    $('#qr-img').innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+  } catch (e) { $('#qr-img').innerHTML = '<p class="meta">Não consegui gerar o QR agora. Use o botão de copiar o link.</p>'; }
+}
+function downloadText(filename, text, type = 'text/plain') {
+  const blob = new Blob([text], { type: type + ';charset=utf-8' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename;
+  document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+}
+function exportBackup() {
+  const data = { app: 'fichario', version: APP_VERSION, at: new Date().toISOString(), lessons: Object.fromEntries(S.lessons), progress: S.progress, stats: S.stats, settings: S.settings };
+  downloadText('fichario-backup-' + dayKey() + '.json', JSON.stringify(data), 'application/json');
+}
+async function importBackup(file) {
+  try {
+    const d = JSON.parse(await file.text());
+    if (!d || d.app !== 'fichario' || !d.lessons) throw new Error('formato');
+    const t = now();
+    for (const [id, L] of Object.entries(d.lessons)) { const cur = S.lessons.get(id); if (!cur || (L.u || 0) >= (cur.u || 0)) { const x = { ...L, u: Math.max(L.u || 0, t) }; S.lessons.set(id, x); S.outbox.lessons[id] = x; } }
+    for (const [lid, w] of Object.entries(d.progress || {})) for (const [wid, e] of Object.entries(w || {})) {
+      const cur = (S.progress[lid] || {})[wid];
+      if (!cur || (e.u || 0) > (cur.u || 0)) { (S.progress[lid] = S.progress[lid] || {})[wid] = e; S.outbox.progress[lid + ':' + wid] = e; }
+    }
+    for (const [day, e] of Object.entries((d.stats && d.stats.d) || {})) { const cur = S.stats.d[day]; if (!cur || e.n > cur.n) { S.stats.d[day] = e; S.outbox.stats[day] = e; } }
+    markDirty(); closeSheet(); toast('Backup restaurado.');
+  } catch (e) { toast('Este arquivo não é um backup do Fichário.'); }
+}
+async function doSaveSettings() {
+  const g = (id) => $('#' + id);
+  if (g('set-rate')) lsSet('rate', TTS.rate);
+  await saveSettings({
+    sessionSize: Number(g('set-size').value) || 15, newPerSession: Number(g('set-new').value) || 8,
+    about: g('set-about').value.trim().slice(0, 400), autoSpeak: g('set-auto') ? g('set-auto').checked : true,
+  });
+  closeSheet(); toast('Ajustes salvos.'); render();
+}
+function openHelp() {
+  openSheet(`${sheetHead('Como funciona o índice de reforço')}
+    <p>Cada palavra tem um índice de 0 a 100% que mostra o quanto você já sabe aquela palavra.</p>
+    <ul style="margin:0;padding-left:20px;display:grid;gap:8px">
+      <li><b>Sobe quando você acerta.</b> Exercícios difíceis valem mais: escolher uma opção vale pouco; escrever, ouvir e escrever, ou usar a palavra numa frase vale mais.</li>
+      <li><b>Só com múltipla escolha, a palavra vai no máximo até 65%.</b> Para ficar "Dominada", você precisa escrever ou usar a palavra.</li>
+      <li><b>Cai quando você erra</b> e a palavra volta mais cedo para revisão.</li>
+      <li><b>Vai baixando aos poucos</b> quando você fica dias sem revisar. Quanto mais vezes você acerta em dias diferentes, mais devagar ele cai.</li>
+      <li><b>O treino do dia</b> começa pelas palavras da última aula, depois as revisões pendentes e as mais fracas.</li>
+    </ul>
+    <ul class="legend">${BANDS.map(([b, l]) => `<li><span class="dot ${b}"></span>${l}</li>`).join('')}</ul>
+    <p class="meta">Nova = ainda não treinada · Fraca = até 39% · Aprendendo = 40 a 69% · Quase lá = 70 a 84% · Dominada = 85% ou mais.</p>`);
+}
+async function exportCsv() {
+  const t = now(); const q = (s) => '"' + String(s ?? '').replace(/"/g, '""') + '"';
+  const rows = [['aula', 'data', 'ingles', 'portugues', 'pronuncia', 'dica', 'exemplo', 'exemplo_pt', 'reforco', 'acertos', 'erros'].join(';')];
+  for (const i of S.items) {
+    if (i.t === 'concept') continue; const L = S.lessons.get(i.lid);
+    rows.push([L.num || '', L.date || '', stripMarks(i.en), i.pt, i.pron, i.note, i.ex, i.exPt, reforco(i.p, t), i.p ? i.p.ok || 0 : 0, i.p ? i.p.ko || 0 : 0].map(q).join(';'));
+  }
+  downloadText('fichario-ingles.csv', '\ufeff' + rows.join('\r\n'), 'text/csv');
+}
+
+/* ================= events ================= */
+const ACT = {
+  tab: (el) => { closeSheet(); setTab(el.dataset.tab); },
+  settings: () => openSettings(),
+  'save-settings': () => doSaveSettings(),
+  help: () => openHelp(),
+  'close-sheet': () => closeSheet(),
+  say: (el) => speak(el.dataset.text || '', { rate: el.dataset.rate ? Number(el.dataset.rate) : undefined }),
+  word: (el) => openWord(el.dataset.gid),
+  'edit-word': (el) => openEditWord(el.dataset.gid),
+  'reset-word': async (el) => { if (el.dataset.confirm !== '1') { el.dataset.confirm = '1'; el.textContent = 'Toque de novo para zerar'; return; } await resetProgress(el.dataset.gid); toast('Progresso zerado.'); openWord(el.dataset.gid); dataChanged(); },
+  'open-lesson': (el) => { closeSheet(); S.lessonOpen = el.dataset.lid; if (S.tab !== 'lessons') { S.tab = 'lessons'; lsSet('tab', 'lessons'); renderShell(); } render(); window.scrollTo(0, 0); },
+  'close-lesson': () => { S.lessonOpen = null; render(); },
+  'edit-lesson': (el) => openImport(el.dataset.lid),
+  'del-lesson': async (el) => {
+    if (el.dataset.confirm !== '1') { el.dataset.confirm = '1'; el.innerHTML = `${IC.trash} Confirmar: excluir aula e progresso`; return; }
+    try { await deleteLesson(el.dataset.lid); S.lessonOpen = null; toast('Aula excluída.'); render(); } catch (e) { toast('Não consegui excluir agora.'); }
+  },
+  'link-done': async (el) => {
+    const L = S.lessons.get(el.dataset.lid); if (!L) return;
+    const links = (L.links || []).map((lk, k) => (k === Number(el.dataset.k) ? { ...lk, done: el.checked } : lk));
+    try { await patchLesson(el.dataset.lid, { links }); } catch (e) { toast('Não consegui salvar agora.'); }
+  },
+  'link-del': async (el) => {
+    const L = S.lessons.get(el.dataset.lid); if (!L) return;
+    const links = (L.links || []).filter((_, k) => k !== Number(el.dataset.k));
+    try { await patchLesson(el.dataset.lid, { links }); } catch (e) { toast('Não consegui salvar agora.'); }
+  },
+  import: () => openImport(null),
+  start: (el) => startSession(el.dataset.mode, { lid: el.dataset.lid, gid: el.dataset.gid }),
+  'export-csv': () => exportCsv(),
+  'export-backup': () => exportBackup(),
+  connect: async (el) => {
+    const msg = $('#conn-msg'); el.disabled = true; if (msg) msg.innerHTML = '<span class="thinking">Conectando…</span>';
+    try { await connectBackend($('#conn-url').value, $('#conn-k').value); toast('Conectado à planilha.'); openSettings(); render(); }
+    catch (e) { if (msg) msg.textContent = (e && e.message && e.code !== 'network' ? e.message : syncErrText((e && e.code) || 'network')); el.disabled = false; }
+  },
+  'sync-now': async () => { await syncNow('manual'); if (!$('#layer-sheet').hidden) openSettings(); },
+  disconnect: (el) => {
+    if (el.dataset.confirm !== '1') { el.dataset.confirm = '1'; el.textContent = 'Confirmar: desconectar'; return; }
+    disconnectBackend(); openSettings(); render(); toast('Desconectado. Os dados continuam neste aparelho.');
+  },
+  'show-qr': () => showQr(),
+  'copy-link': async (el) => {
+    const l = setupLink();
+    try { await navigator.clipboard.writeText(l); el.textContent = 'Link copiado'; } catch (e) { toast('Não consegui copiar. Selecione e copie manualmente.'); }
+  },
+};
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-act]'); if (!el) return;
+  if (el.tagName === 'INPUT' && el.type === 'checkbox') return;
+  const fn = ACT[el.dataset.act] || PACT[el.dataset.act] || XACT[el.dataset.act];
+  if (fn) { e.preventDefault(); fn(el, e); }
+});
+document.addEventListener('change', (e) => {
+  const el = e.target;
+  if (el.matches('input[type="checkbox"][data-act]')) { const fn = ACT[el.dataset.act] || XACT[el.dataset.act]; if (fn) fn(el, e); return; }
+  if (el.id === 'f-lesson' || el.id === 'f-band' || el.id === 'f-sort') { S.filters[el.id.slice(2)] = el.value; renderWordList(); }
+});
+document.addEventListener('input', (e) => { if (e.target.id === 'f-q') { S.filters.q = e.target.value; renderWordList(); } });
+document.addEventListener('submit', async (e) => {
+  const f = e.target.closest('form[data-form]'); if (!f) return;
+  e.preventDefault();
+  if (f.dataset.form === 'edit-word') saveEditWord(f);
+  else if (f.dataset.form === 'add-link') {
+    const lid = f.dataset.lid; const inp = f.querySelector('input'); const url = normUrl(inp.value);
+    if (!url) { toast('Cole um link válido (começando com https://).'); return; }
+    const L = S.lessons.get(lid); const links = [...(L.links || []), { url, title: '', done: false }];
+    try { await patchLesson(lid, { links }); inp.value = ''; render(); } catch (err) { toast('Não consegui salvar agora.'); }
+  } else if (XFORM[f.dataset.form]) XFORM[f.dataset.form](f, e);
+});
+$('#layer-sheet').addEventListener('click', (e) => { if (e.target.id === 'layer-sheet') closeSheet(); });
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { if (!$('#layer-sheet').hidden) closeSheet(); }
+});
+function normUrl(s) {
+  s = String(s || '').trim(); if (!s) return '';
+  if (!/^https?:\/\//i.test(s)) s = 'https://' + s;
+  try { const u = new URL(s); return /^https?:$/.test(u.protocol) ? u.href : ''; } catch (e) { return ''; }
+}
+/* ================= practice session ================= */
+const P = { steps: [], i: 0, mode: '', opts: {}, startedAt: 0, res: [], retried: new Set(), before: new Map(), answered: false, stepStart: 0, cur: null, hintUsed: false, ctl: null };
+
+function priority(i, t, mode) {
+  let pr = Math.random() * 8;
+  if (i.lid === S.latest) pr += 35; else if (i.lid === S.second) pr += 12;
+  if (isNew(i)) pr += 22;
+  else {
+    const p = i.p; const ratio = (t - p.lr) / DAY / (p.st || 0.5);
+    if (ratio >= 1) pr += 25 + Math.min(20, (ratio - 1) * 10);
+    pr += (100 - reforco(p, t)) * 0.3;
+    if (p.last === 0) pr += 15;
+    if (t - p.lr < 10 * 60 * 1000) pr -= 40;
+  }
+  if (i.t === 'concept') pr -= 4;
+  return pr;
+}
+const hasCloze = (i) => i.t !== 'concept' && !!(i.ex && clozeParts(i));
+function clozeParts(it) {
+  const ex = it.ex || ''; const cl = findCl(it); if (!cl) return null;
+  const k = ex.indexOf(cl); if (k < 0) return null;
+  return { before: ex.slice(0, k), after: ex.slice(k + cl.length), cl, atStart: k === 0 };
+}
+function pickType(i, mode, fresh) {
+  const s = fresh ? 0 : reforco(i.p); const tts = TTS.ok; const ai = aiOn();
+  if (i.t === 'concept') {
+    if (!(i.drills || []).length) return 'intro';
+    if (mode === 'listen' && tts) return 'drill_listen';
+    if (s < 50) return pick(tts ? ['drill_mc', 'drill_mc', 'drill_listen'] : ['drill_mc']);
+    return pick(['drill_type', 'drill_type', 'drill_mc']);
+  }
+  const cz = hasCloze(i); let o;
+  if (mode === 'listen') o = s < 35 ? ['lis_word', 'lis_mean'] : ['lis_mean', 'dict_word', ...(cz ? ['dict_sent', 'dict_sent'] : [])];
+  else if (mode === 'write') o = ai ? ['use'] : ['type', ...(cz ? ['cloze_type'] : [])];
+  else if (fresh || s < 25) o = ['rec', 'rec', 'pro_mc', 'lis_word'];
+  else if (s < 50) o = ['pro_mc', 'rec', 'lis_mean', 'lis_mean', ...(cz ? ['cloze_mc', 'cloze_mc'] : [])];
+  else if (s < 75) o = ['type', 'dict_word', 'lis_mean', ...(cz ? ['cloze_type', 'cloze_type'] : [])];
+  else o = ['type', 'dict_word', ...(cz ? ['cloze_type', 'dict_sent', 'dict_sent'] : []), ...(ai ? ['use', 'use'] : [])];
+  if (!tts) o = o.filter((x) => !/^(lis|dict)/.test(x));
+  if (!o.length) o = ['rec'];
+  return pick(o);
+}
+function easier(type, it) {
+  if (it.t === 'concept') return 'drill_mc';
+  const m = { type: 'pro_mc', cloze_type: hasCloze(it) ? 'cloze_mc' : 'pro_mc', dict_word: 'lis_word', dict_sent: 'lis_mean', lis_mean: 'lis_word', use: 'type', rec: 'pro_mc', pro_mc: 'rec', lis_word: 'rec', cloze_mc: 'rec' };
+  let t = m[type] || 'rec';
+  if (!TTS.ok && /^(lis|dict)/.test(t)) t = 'rec';
+  return t;
+}
+function buildSession(mode, opts = {}) {
+  const t = now(); let pool = S.items.slice();
+  if (mode === 'lesson') pool = pool.filter((i) => i.lid === opts.lid);
+  else if (mode === 'word') pool = pool.filter((i) => i.gid === opts.gid);
+  else if (mode === 'write') pool = pool.filter((i) => i.t !== 'concept');
+  else if (mode === 'listen') pool = TTS.ok ? pool.filter((i) => i.t !== 'concept' || (i.drills || []).length) : [];
+  else if (mode === 'weak') { const pr = pool.filter((i) => !isNew(i)); if (pr.length >= 4) pool = pr; }
+  if (!pool.length) return [];
+  if (mode === 'word') {
+    const i = pool[0]; const steps = [];
+    if (i.t === 'concept') { steps.push('intro', 'drill_mc', TTS.ok ? 'drill_listen' : 'drill_mc', 'drill_type'); }
+    else {
+      if (isNew(i)) steps.push('intro');
+      steps.push('rec', TTS.ok ? 'lis_mean' : 'pro_mc', 'type');
+      if (hasCloze(i)) steps.push('cloze_type');
+      if (aiOn()) steps.push('use');
+    }
+    return steps.map((type) => ({ gid: i.gid, type }));
+  }
+  const size = mode === 'write' ? 5 : (Number(S.settings.sessionSize) || 15);
+  const ranked = mode === 'weak'
+    ? pool.map((i) => ({ i, pr: -reforco(i.p, t) + Math.random() * 6 - (isNew(i) ? 60 : 0) }))
+    : pool.map((i) => ({ i, pr: priority(i, t, mode) }));
+  ranked.sort((a, b) => b.pr - a.pr);
+  const introduces = mode !== 'listen' && mode !== 'write';
+  const maxNew = Number(S.settings.newPerSession) || 8;
+  let nNew = 0; const chosen = [];
+  for (const { i } of ranked) {
+    if (isNew(i) && introduces) { if (nNew >= maxNew) continue; nNew++; }
+    chosen.push(i); if (chosen.length >= size) break;
+  }
+  const seq = []; const delayed = [];
+  for (const i of shuffle(chosen)) {
+    const fresh = isNew(i) && introduces;
+    if (fresh) { seq.push({ gid: i.gid, type: 'intro' }); delayed.push({ step: { gid: i.gid, type: pickType(i, mode, true) }, wait: 3 }); }
+    else seq.push({ gid: i.gid, type: pickType(i, mode, false) });
+    for (const d of delayed) d.wait--;
+    while (delayed.length && delayed[0].wait <= 0) seq.push(delayed.shift().step);
+  }
+  for (const d of delayed) seq.push(d.step);
+  return seq;
+}
+function startSession(mode, opts = {}) {
+  closeSheet(); plStop();
+  if (mode === 'write' && !aiOn()) { toast('A correção por IA não está disponível agora.'); return; }
+  const steps = buildSession(mode, opts);
+  if (!steps.length) { toast(mode === 'listen' && !TTS.ok ? 'Este navegador não tem áudio em inglês.' : 'Nada para treinar aqui ainda.'); return; }
+  Object.assign(P, { steps, i: 0, mode, opts, startedAt: now(), res: [], retried: new Set(), before: new Map(), answered: false, cur: null });
+  for (const s of steps) if (!P.before.has(s.gid)) { const it = S.byGid.get(s.gid); P.before.set(s.gid, it ? reforco(it.p) : 0); }
+  const L = $('#layer-practice'); L.hidden = false; document.body.style.overflow = 'hidden';
+  renderStep();
+}
+function closePractice() {
+  speechStop(); if (P.ctl) P.ctl.abort();
+  persist(true); scheduleSync(400);
+  const L = $('#layer-practice'); L.hidden = true; L.innerHTML = ''; document.body.style.overflow = '';
+  P.cur = null; render();
+}
+
+/* ---------- exercise builders ---------- */
+const lowerFirst = (s) => (/^I\b/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1));
+function distractors(it, val, n) {
+  const target = norm(val(it));
+  const pool = S.items.filter((x) => x.gid !== it.gid && x.t !== 'concept' && val(x) && norm(val(x)) !== target && !soundsAlike(x, it) && !overlapAns(x, it));
+  const same = shuffle(pool.filter((x) => x.lid === it.lid)); const other = shuffle(pool.filter((x) => x.lid !== it.lid));
+  const out = []; const seen = new Set([target]);
+  for (const x of [...same.slice(0, 2), ...other, ...same.slice(2)]) {
+    const k = norm(val(x)); if (!k || seen.has(k)) continue; seen.add(k); out.push(x); if (out.length >= n) break;
+  }
+  return out;
+}
+function overlapAns(a, b) { const A = new Set(answersFor(a)); return answersFor(b).some((x) => A.has(x)); }
+function mcOptions(it, val, n = 4) {
+  return shuffle([{ text: val(it), ok: true }, ...distractors(it, val, n - 1).map((d) => ({ text: val(d), ok: false }))]);
+}
+const valPt = (x) => x.pt;
+const valEn = (x) => stripMarks(x.en);
+function playHead(text) {
+  return `<div class="play-row"><button class="play" data-act="say" data-text="${esc(stripMarks(text))}" aria-label="Ouvir de novo">${IC.speaker}</button><button class="btn small" data-act="say" data-text="${esc(stripMarks(text))}" data-rate="0.6">devagar</button></div>`;
+}
+const wordHead = (it) => `<div class="ex-row"><p class="ex-word">${hl(it.en)}</p>${sayBtn(it.en)}</div>`;
+const inputBody = (ph) => `<input class="field" id="pr-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done" placeholder="${esc(ph)}"><p id="pr-hint" class="hint" aria-live="polite"></p>`;
+function drillFull(d) { return d.q.replace('____', d.a[0]).replace(/\s*\([^)]*\)/g, '').replace(/\s+([.!?,])/g, '$1'); }
+function buildExercise(step, it) {
+  const T = step.type; const en = stripMarks(it.en);
+  const X = { type: T, label: '', head: '', body: '', mode: 'mc', auto: '', autoRate: undefined, opts: null, answers: null, target: '', hintText: '' };
+  if (it.t === 'concept' && T !== 'intro') {
+    const d = step.drill || pick(it.drills); step.drill = d;
+    const parts = d.q.split('____');
+    const sent = `<p class="ex-sent">${esc(parts[0])}<span class="blank">?</span>${esc(parts.slice(1).join('____'))}</p>${d.pt ? `<p class="ex-sub">${esc(d.pt)}</p>` : ''}`;
+    X.label = 'Gramática · ' + esc(stripMarks(it.en));
+    if (T === 'drill_listen') { X.label = 'Ouça e complete'; X.head = playHead(drillFull(d)) + sent.replace(/<p class="ex-sub">.*<\/p>$/, ''); X.auto = drillFull(d); }
+    else X.head = sent;
+    if (T === 'drill_type') { X.mode = 'input'; X.answers = d.a.map(norm); X.hintText = d.a[0]; X.body = inputBody('Escreva a palavra que falta'); }
+    else { X.opts = shuffle((d.opts || []).map((o) => ({ text: o, ok: d.a.some((a) => norm(a) === norm(o)) }))); }
+  } else switch (T) {
+    case 'intro':
+      X.mode = 'intro';
+      if (it.t === 'concept') {
+        X.label = 'Gramática da aula';
+        X.head = `<p class="ex-word" style="font-size:clamp(26px,7vw,36px)">${hl(it.en)}</p>`;
+        X.body = `<p style="font-size:17.5px">${esc(it.pt)}</p>${(it.examples || []).map((e) => `<div class="ex-row"><span class="ex-sent">${hl(e)}</span>${sayBtn(e, 'sm')}</div>`).join('')}`;
+      } else {
+        X.label = 'Palavra nova · ' + esc(lessonName(S.lessons.get(it.lid)));
+        X.head = wordHead(it) + (it.pron ? `<p class="pron">Pronúncia (professor): <b>${esc(it.pron)}</b></p>` : '');
+        X.body = `<p class="ex-mean">${esc(it.pt)}</p>${it.note ? `<p class="note">${esc(it.note)}</p>` : ''}${it.ex ? `<div class="fgroup"><div class="ex-row"><span class="ex-sent">${markCl(it)}</span>${sayBtn(it.ex, 'sm')}</div><p class="ex-sub">${esc(it.exPt || '')}</p></div>` : ''}`;
+        X.auto = en;
+      }
+      break;
+    case 'rec': X.label = 'O que significa?'; X.head = wordHead(it); X.opts = mcOptions(it, valPt); X.auto = en; break;
+    case 'pro_mc': X.label = 'Como se diz em inglês?'; X.head = `<p class="ex-mean">${esc(it.pt)}</p>`; X.opts = mcOptions(it, valEn); break;
+    case 'lis_word': X.label = 'Ouça e escolha a palavra'; X.head = playHead(en); X.opts = mcOptions(it, valEn); X.auto = en; break;
+    case 'lis_mean': X.label = 'Ouça: o que significa?'; X.head = playHead(en); X.opts = mcOptions(it, valPt); X.auto = en; break;
+    case 'cloze_mc': case 'cloze_type': {
+      const cp = clozeParts(it);
+      if (!cp) { return buildExercise({ ...step, type: T === 'cloze_mc' ? 'pro_mc' : 'type' }, it); }
+      X.label = T === 'cloze_mc' ? 'Complete a frase' : 'Complete a frase (escreva)';
+      X.head = `<p class="ex-sent">${esc(cp.before)}<span class="blank">?</span>${esc(cp.after)}</p><p class="ex-sub">${esc(it.exPt || '')}</p>`;
+      if (T === 'cloze_mc') {
+        const fix = (s) => (cp.atStart ? cap1(s) : lowerFirst(s));
+        X.opts = mcOptions(it, (x) => (x === it ? cp.cl : fix(x.cl || stripLead(norm(stripMarks(x.en))))));
+      } else { X.mode = 'input'; X.answers = [...answersFor(it), norm(cp.cl)]; X.hintText = cp.cl; X.body = inputBody('Escreva a palavra que falta'); }
+      break;
+    }
+    case 'type': X.mode = 'input'; X.label = 'Escreva em inglês'; X.head = `<p class="ex-mean">${esc(it.pt)}</p>`; X.answers = answersFor(it); X.hintText = (it.alt && it.alt[0]) || en.split(' / ')[0]; X.body = inputBody('Digite em inglês'); break;
+    case 'dict_word': X.mode = 'input'; X.label = 'Ouça e escreva'; X.head = playHead(en); X.answers = answersFor(it); X.hintText = en.split(' / ')[0]; X.body = inputBody('Escreva o que você ouviu'); X.auto = en; break;
+    case 'dict_sent': X.mode = 'sentence'; X.label = 'Ouça e escreva a frase'; X.head = playHead(it.ex); X.target = it.ex; X.auto = it.ex; X.autoRate = Math.min(TTS.rate, 0.85);
+      X.body = `<textarea class="field" id="pr-input" rows="2" autocomplete="off" autocapitalize="sentences" spellcheck="false" placeholder="Escreva a frase que você ouviu"></textarea>`; break;
+    case 'use': X.mode = 'use'; X.label = 'Use numa frase'; X.head = wordHead(it) + `<p class="ex-sub">${esc(it.pt)}</p>`;
+      X.body = `<textarea class="field" id="pr-input" rows="3" autocapitalize="sentences" placeholder="Escreva uma frase sua em inglês com “${esc(en.split(' / ')[0])}”"></textarea><p class="meta">Pode ser sobre o seu dia, o trabalho ou a família. A IA corrige.</p>`; break;
+    default: return buildExercise({ ...step, type: 'rec' }, it);
+  }
+  if (X.opts) X.body = `<div class="opts" id="pr-opts" role="group" aria-label="Opções">${X.opts.map((o, k) => `<button class="opt" data-act="pr-pick" data-k="${k}"><kbd>${k + 1}</kbd><span>${esc(o.text)}</span></button>`).join('')}</div>`;
+  if (!TTS.ok) X.auto = '';
+  return X;
+}
+function footFor(X) {
+  if (X.mode === 'intro') return `<button class="btn primary big wide" data-act="pr-next" id="pr-next">Continuar</button>`;
+  if (X.mode === 'mc') return `<button class="btn ghost" data-act="pr-dunno">Não sei</button>`;
+  if (X.mode === 'use') return `<button class="btn ghost" data-act="pr-skip">Pular</button><button class="btn primary big" data-act="pr-check">Corrigir</button>`;
+  return `<button class="btn ghost" data-act="pr-dunno">Não sei</button>${X.mode === 'input' ? '<button class="btn ghost" data-act="pr-hint">Dica</button>' : ''}<button class="btn primary big" data-act="pr-check">Verificar</button>`;
+}
+function renderStep() {
+  const L = $('#layer-practice');
+  if (P.i >= P.steps.length) { renderSummary(); return; }
+  const step = P.steps[P.i]; const it = S.byGid.get(step.gid);
+  if (!it) { P.i++; renderStep(); return; }
+  P.answered = false; P.hintUsed = false; P.stepStart = now();
+  const X = buildExercise(step, it); P.cur = { step, it, ex: X };
+  const pct = Math.round((P.i / P.steps.length) * 100);
+  L.innerHTML = `<div class="pr-top"><div class="pr-top-in"><button class="icon-btn" data-act="pr-close" aria-label="Encerrar treino">${IC.close}</button>
+      <div class="pr-bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><span style="width:${pct}%"></span></div>
+      <span class="pr-count">${P.i + 1}/${P.steps.length}</span></div></div>
+    <div class="pr-scroll" id="pr-scroll"><div class="pr-inner">
+      <article class="icard"><header class="icard-head"><p class="ex-label">${X.label}</p>${X.head}</header>${X.body ? `<div class="icard-body">${X.body}</div>` : ''}</article>
+      <div id="pr-fb" aria-live="polite"></div>
+    </div></div>
+    <footer class="pr-foot"><div class="pr-foot-in" id="pr-foot">${footFor(X)}</div></footer>`;
+  $('#pr-scroll').scrollTop = 0;
+  const inp = $('#pr-input'); if (inp) inp.focus({ preventScroll: true });
+  else { const nb = $('#pr-next'); if (nb) nb.focus({ preventScroll: true }); }
+  if (X.auto && S.settings.autoSpeak !== false) speak(X.auto, { rate: X.autoRate });
+}
+function answer(q, detail = {}) {
+  if (P.answered || !P.cur) return; P.answered = true;
+  const { step, it } = P.cur; const t = now();
+  const before = reforco(it.p, t);
+  const entry = applyAnswer(it.p, step.type, q, t);
+  if (detail.hist) entry.h = [...((it.p && it.p.h) || []), detail.hist].slice(-3);
+  else if (it.p && it.p.h) entry.h = it.p.h;
+  queueProgress(it.gid, entry);
+  bumpStats(q >= 1, t - P.stepStart);
+  P.res.push({ gid: it.gid, type: step.type, q });
+  if (q < 1 && !P.retried.has(it.gid) && P.mode !== 'word') {
+    P.retried.add(it.gid);
+    P.steps.splice(Math.min(P.steps.length, P.i + 4), 0, { gid: it.gid, type: easier(step.type, it), retry: true });
+  }
+  showFeedback(q, before, reforco(entry, t), entry, detail);
+}
+function showFeedback(q, before, after, entry, detail) {
+  const { it, step } = P.cur;
+  const title = q >= 1 ? pick(['Correto!', 'Isso!', 'Mandou bem!', 'Certo!']) : q > 0 ? 'Quase!' : 'Resposta certa:';
+  const cls = q >= 1 ? 'ok' : q > 0 ? 'almost' : 'bad';
+  let ans;
+  if (it.t === 'concept') {
+    const d = step.drill; const full = d ? esc(d.q).replace('____', `<b>${esc(d.a[0])}</b>`) : '';
+    ans = `<p class="fb-ans">${full} ${d ? sayBtn(drillFull(d), 'sm') : ''}</p>${d && d.pt ? `<p class="ex-sub">${esc(d.pt)}</p>` : ''}<p class="meta">${esc(it.pt)}</p>`;
+  } else {
+    ans = `<p class="fb-ans"><b>${hl(it.en)}</b> → ${esc(it.pt)}</p>${it.pron && q < 1 ? `<p class="pron">Pronúncia: <b>${esc(it.pron)}</b></p>` : ''}${it.ex ? `<div class="ex-row"><span class="ex-sent" style="font-size:18px">${markCl(it)}</span>${sayBtn(it.ex, 'sm')}</div><p class="ex-sub">${esc(it.exPt || '')}</p>` : ''}`;
+  }
+  const arrow = '→';
+  $('#pr-fb').innerHTML = `<div class="fb ${cls}"><p class="fb-title">${title}</p>${detail.html || ''}${ans}
+    <div class="fb-meter"><span>Reforço</span>${meterHTML(entry, now(), false)}<span class="arrow">${before}% ${arrow} ${after}%</span></div></div>`;
+  $('#pr-foot').innerHTML = `<button class="btn primary big wide" data-act="pr-next" id="pr-next">Continuar</button>`;
+  const nb = $('#pr-next'); if (nb) nb.focus({ preventScroll: true });
+  const fb = $('#pr-fb'); if (fb && fb.scrollIntoView) fb.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  if (q < 1 && it.t !== 'concept' && /^(lis|dict|rec)/.test(step.type)) speak(stripMarks(it.en));
+}
+function checkTyped(input, answers) {
+  const x = stripLead(norm(input)); if (!x) return 0;
+  let best = 99;
+  for (const a of answers) { const aa = stripLead(a); if (x === aa || x === a) return 1; best = Math.min(best, lev(x, aa)); }
+  if ((best === 1 && x.length >= 4) || (best === 2 && x.length >= 9)) return 0.5;
+  return 0;
+}
+function checkSentence(input, target) {
+  const a = norm(input).split(' ').filter(Boolean);
+  const toks = stripMarks(target).split(/\s+/).map((raw) => ({ raw, n: norm(raw) })).filter((x) => x.n);
+  const b = toks.map((x) => x.n);
+  const eq = (x, y) => x === y || (y.length >= 4 && lev(x, y) <= 1);
+  const m = a.length, n = b.length; const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) dp[i][j] = eq(a[i - 1], b[j - 1]) ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+  const hit = new Array(n).fill(false); let i = m, j = n;
+  while (i > 0 && j > 0) { if (eq(a[i - 1], b[j - 1])) { hit[j - 1] = true; i--; j--; } else if (dp[i - 1][j] >= dp[i][j - 1]) i--; else j--; }
+  const score = dp[m][n] / Math.max(n, m, 1);
+  const html = toks.map((tk, k) => `<span class="${hit[k] ? 'w-ok' : 'w-miss'}">${esc(tk.raw)}</span>`).join(' ');
+  return { q: score >= 0.95 ? 1 : score >= 0.7 ? 0.5 : 0, html };
+}
+async function checkUse(v) {
+  const { it } = P.cur; const en = stripMarks(it.en);
+  if (!aiOn()) { toast('A correção por IA não está disponível agora.'); return; }
+  const btn = $('[data-act="pr-check"]'); const inp = $('#pr-input');
+  if (btn) btn.disabled = true; if (inp) inp.disabled = true;
+  $('#pr-fb').innerHTML = `<p class="thinking">Corrigindo sua frase…</p>`;
+  P.ctl = new AbortController();
+  const prompt = `You are a kind English teacher. Your student is a Brazilian adult, CEFR level A1–A2.
+He had to write one English sentence using the target: "${en}" (meaning in Portuguese: ${it.pt}).
+His sentence: """${v.slice(0, 400)}"""
+
+Reply with only a JSON object:
+{"verdict": "correct" | "almost" | "wrong", "used_target": true | false, "corrected": "his sentence with the minimum corrections needed (identical if already correct)", "better": "a more natural version only if clearly useful, otherwise an empty string", "feedback": "one or two short sentences in Brazilian Portuguese: say what is good and explain the main correction simply"}
+
+Rules: "correct" = understandable and grammatical, with the target used with the right meaning (ignore capital letters and final punctuation). "almost" = the target is used correctly but there are small mistakes elsewhere. "wrong" = the target is missing, used with the wrong meaning, or the sentence is not understandable. Any form of the target counts (plural, past tense, -ing, with or without "to").`;
+  try {
+    const r = await AI.json(prompt, { tier: 'quick', signal: P.ctl.signal });
+    if (!P.cur || P.cur.it !== it) return;
+    const verdict = String((r && r.verdict) || '').toLowerCase(); const used = !(r && r.used_target === false);
+    let q = verdict === 'correct' ? 1 : verdict === 'almost' ? 0.5 : 0; if (!used) q = 0;
+    const corrected = String((r && r.corrected) || v); const better = String((r && r.better) || ''); const fbk = String((r && r.feedback) || '');
+    const html = `<p class="fb-ans">${q >= 1 ? 'Sua frase: ' : 'Correção: '}<b>${esc(corrected)}</b> ${sayBtn(corrected, 'sm')}</p>
+      ${better && norm(better) !== norm(corrected) ? `<p class="ex-sub">Mais natural: ${esc(better)} ${sayBtn(better, 'sm')}</p>` : ''}
+      ${fbk ? `<p>${esc(fbk)}</p>` : ''}${q < 1 && norm(corrected) !== norm(v) ? `<p class="ex-sub">Você escreveu: ${esc(v)}</p>` : ''}`;
+    answer(q, { html, hist: { t: now(), s: v, c: corrected, v: verdict } });
+  } catch (e) {
+    if (e && e.code === 'cancelled') return;
+    const fb = $('#pr-fb'); if (fb) fb.innerHTML = `<p class="notice">${esc(aiErrMsg(e))} Você pode tentar de novo ou pular.</p>`;
+    if (btn) btn.disabled = false; if (inp) inp.disabled = false;
+  }
+}
+function renderSummary() {
+  persist(true); scheduleSync(400); speechStop();
+  const L = $('#layer-practice'); const t = now();
+  const n = P.res.length; const ok = P.res.filter((r) => r.q >= 1).length;
+  const mins = Math.max(1, Math.round((t - P.startedAt) / 60000));
+  const gids = [...new Set(P.steps.map((s) => s.gid))];
+  const rows = gids.map((g) => { const it = S.byGid.get(g); if (!it) return null; const b = P.before.get(g) || 0; const a = reforco(it.p, t); return { it, b, a, d: a - b }; })
+    .filter(Boolean).sort((x, y) => x.a - y.a);
+  const list = rows.map((r) => `<li><span class="w">${hl(r.it.en)}</span>${meterHTML(r.it.p, t)}<span class="delta ${r.d > 0 ? 'up' : r.d < 0 ? 'down' : 'eq'}">${r.d > 0 ? '+' + r.d : r.d < 0 ? '−' + Math.abs(r.d) : '±0'}</span></li>`).join('');
+  const pct = n ? Math.round((ok / n) * 100) : 0;
+  L.innerHTML = `<div class="pr-top"><div class="pr-top-in"><button class="icon-btn" data-act="pr-close" aria-label="Fechar">${IC.close}</button><div class="pr-bar"><span style="width:100%"></span></div><span class="pr-count">fim</span></div></div>
+    <div class="pr-scroll"><div class="pr-inner">
+      <article class="icard summary"><header class="icard-head"><p class="ex-label">Treino concluído</p><p class="ex-word">${ok} de ${n} certas</p><p class="ex-sub">${pct}% de acerto · ${mins} min · o índice de reforço já foi atualizado</p></header>
+      <div class="icard-body" style="background:none"><p class="label">Como ficou cada item</p><ul class="sum-list">${list}</ul></div></article>
+    </div></div>
+    <footer class="pr-foot"><div class="pr-foot-in"><button class="btn" data-act="pr-again">Treinar de novo</button><button class="btn primary" data-act="pr-close" id="pr-next">Concluir</button></div></footer>`;
+  P.cur = null;
+}
+const PACT = {
+  'pr-pick': (el) => {
+    if (P.answered || !P.cur) return; const k = Number(el.dataset.k); const o = P.cur.ex.opts[k];
+    $$('#pr-opts .opt').forEach((b, j) => { b.disabled = true; if (P.cur.ex.opts[j].ok) b.classList.add('correct'); });
+    if (!o.ok) el.classList.add('wrong');
+    answer(o.ok ? 1 : 0);
+  },
+  'pr-dunno': () => {
+    if (P.answered || !P.cur) return;
+    $$('#pr-opts .opt').forEach((b, j) => { b.disabled = true; if (P.cur.ex.opts[j].ok) b.classList.add('correct'); });
+    const inp = $('#pr-input'); if (inp) inp.disabled = true;
+    answer(0);
+  },
+  'pr-hint': () => {
+    if (P.answered || !P.cur) return; const h = P.cur.ex.hintText || ''; if (!h) return;
+    P.hintUsed = true;
+    $('#pr-hint').textContent = h.split('').map((c, k) => (c === ' ' ? '  ' : k === 0 ? c : '_')).join(' ');
+    const inp = $('#pr-input'); if (inp) inp.focus();
+  },
+  'pr-check': () => {
+    if (P.answered || !P.cur) return; const X = P.cur.ex; const inp = $('#pr-input'); if (!inp) return;
+    const v = inp.value.trim(); if (!v) { inp.focus(); return; }
+    if (X.mode === 'input') {
+      let q = checkTyped(v, X.answers); if (q >= 1 && P.hintUsed) q = 0.5; inp.disabled = true;
+      answer(q, { html: q < 1 ? `<p class="ex-sub">Você escreveu: <b>${esc(v)}</b>${q > 0 ? ' (quase, confira a grafia)' : ''}</p>` : '' });
+    } else if (X.mode === 'sentence') {
+      const r = checkSentence(v, X.target); inp.disabled = true;
+      answer(r.q, { html: `<p class="diff ex-sent" style="font-size:19px">${r.html}</p>` });
+    } else if (X.mode === 'use') checkUse(v);
+  },
+  'pr-next': () => { if (!P.cur) { closePractice(); return; } if (!P.answered && P.cur.ex.mode !== 'intro') return; speechStop(); P.i++; renderStep(); },
+  'pr-skip': () => { if (P.ctl) P.ctl.abort(); speechStop(); P.i++; renderStep(); },
+  'pr-close': () => { const mid = P.cur && P.res.length; closePractice(); if (mid) toast('Treino encerrado. As respostas já foram salvas.'); },
+  'pr-again': () => { const m = P.mode; const o = P.opts; closePractice(); startSession(m, o); },
+};
+document.addEventListener('keydown', (e) => {
+  if ($('#layer-practice').hidden) return;
+  const a = document.activeElement; const tag = a ? a.tagName : '';
+  if (e.key === 'Escape') { PACT['pr-close'](); return; }
+  if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) {
+    if (!P.cur || P.answered || P.cur.ex.mode === 'intro') { e.preventDefault(); PACT['pr-next'](); return; }
+    if (tag === 'INPUT' || tag === 'TEXTAREA') { e.preventDefault(); PACT['pr-check'](); return; }
+  }
+  if (P.cur && !P.answered && tag !== 'INPUT' && tag !== 'TEXTAREA' && /^[1-4]$/.test(e.key)) {
+    const b = $$('#pr-opts .opt')[Number(e.key) - 1]; if (b && !b.disabled) { e.preventDefault(); b.click(); }
+  }
+});
+/* ================= import (.docx) ================= */
+const IMP = { draft: null, ctl: null, editing: null, busy: false, err: '', note: '', confirmOverwrite: false, progress: 0 };
+const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+
+async function unzipNative(buf, name) {
+  const dv = new DataView(buf); const u8 = new Uint8Array(buf);
+  let eocd = -1;
+  for (let i = u8.length - 22; i >= Math.max(0, u8.length - 22 - 65557); i--) { if (dv.getUint32(i, true) === 0x06054b50) { eocd = i; break; } }
+  if (eocd < 0) throw new Error('not a zip');
+  const count = dv.getUint16(eocd + 10, true); let p = dv.getUint32(eocd + 16, true);
+  const dec = new TextDecoder();
+  for (let k = 0; k < count; k++) {
+    if (dv.getUint32(p, true) !== 0x02014b50) break;
+    const method = dv.getUint16(p + 10, true); const csize = dv.getUint32(p + 20, true);
+    const nlen = dv.getUint16(p + 28, true); const elen = dv.getUint16(p + 30, true); const clen = dv.getUint16(p + 32, true);
+    const lho = dv.getUint32(p + 42, true);
+    const fname = dec.decode(u8.subarray(p + 46, p + 46 + nlen));
+    if (fname === name) {
+      const start = lho + 30 + dv.getUint16(lho + 26, true) + dv.getUint16(lho + 28, true);
+      const data = u8.slice(start, start + csize);
+      if (method === 0) return dec.decode(data);
+      if (method !== 8) throw new Error('compression ' + method);
+      const stream = new Blob([data]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+      return await new Response(stream).text();
+    }
+    p += 46 + nlen + elen + clen;
+  }
+  return null;
+}
+function loadScript(src) { return new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); }); }
+async function unzipText(buf, name) {
+  if (typeof DecompressionStream === 'function') { try { return await unzipNative(buf, name); } catch (e) { console.warn('unzip', e); } }
+  if (!window.JSZip) await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js');
+  const z = await window.JSZip.loadAsync(buf); const f = z.file(name); return f ? f.async('string') : null;
+}
+function paraText(p) {
+  let s = '';
+  for (const r of p.getElementsByTagNameNS(W_NS, 'r')) {
+    let anc = r.parentNode; let deleted = false;
+    while (anc && anc !== p) { if (anc.localName === 'del') { deleted = true; break; } anc = anc.parentNode; }
+    if (deleted) continue;
+    const rPr = Array.from(r.children).find((c) => c.localName === 'rPr');
+    let isHl = false;
+    if (rPr) {
+      for (const c of rPr.children) {
+        if (c.localName === 'highlight') { const v = c.getAttributeNS(W_NS, 'val') || c.getAttribute('w:val'); if (v && v !== 'none') isHl = true; }
+        if (c.localName === 'shd') { const f = c.getAttributeNS(W_NS, 'fill') || c.getAttribute('w:fill'); if (f && !/^(auto|ffffff|000000)$/i.test(f)) isHl = true; }
+      }
+    }
+    let t = '';
+    for (const c of r.children) { if (c.localName === 't') t += c.textContent; else if (c.localName === 'tab') t += ' '; else if (c.localName === 'br' || c.localName === 'cr') t += '\n'; }
+    if (!t) continue;
+    s += isHl && t.trim() ? '⟦' + t + '⟧' : t;
+  }
+  return s.replace(/⟧⟦/g, '');
+}
+function docxParagraphs(xml) {
+  const doc = new DOMParser().parseFromString(xml, 'application/xml');
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0]; const out = [];
+  if (!body) return out;
+  const walk = (node) => {
+    for (const el of node.children) {
+      if (el.localName === 'p') out.push(...paraText(el).split('\n'));
+      else if (el.localName === 'tbl') {
+        for (const tr of el.getElementsByTagNameNS(W_NS, 'tr')) {
+          const cells = Array.from(tr.children).filter((c) => c.localName === 'tc').map((tc) => Array.from(tc.getElementsByTagNameNS(W_NS, 'p')).map(paraText).join(' ').trim()).filter(Boolean);
+          if (cells.length) out.push(cells.length >= 2 && !cells.some((c) => /->|→/.test(c)) ? cells[0] + ' -> ' + cells.slice(1).join(' / ') : cells.join(' '));
+        }
+      } else if (el.localName === 'sdt') { const c = Array.from(el.children).find((x) => x.localName === 'sdtContent'); if (c) walk(c); }
+    }
+  };
+  walk(body);
+  return out;
+}
+async function readDocx(file) {
+  const buf = await file.arrayBuffer();
+  const xml = await unzipText(buf, 'word/document.xml');
+  if (!xml) throw new Error('sem document.xml');
+  let created = '';
+  try {
+    const core = await unzipText(buf, 'docProps/core.xml');
+    const m = core && core.match(/<dcterms:created[^>]*>([^<]+)</);
+    if (m) { const tt = new Date(m[1]).getTime(); if (tt) created = dayKey(tt); }
+  } catch (e) { /* optional */ }
+  return { paras: docxParagraphs(xml), created };
+}
+/* ---------- note parser ---------- */
+const SEP = /\s*(?:-{1,2}>|–>|—>|=>|→|⇒)\s*/;
+function takeParens(s) {
+  const parens = []; const text = String(s || '').replace(/\(([^()]*)\)/g, (_, x) => { if (x.trim()) parens.push(x.trim()); return ' '; }).replace(/\s+/g, ' ').trim();
+  return { text, parens };
+}
+function classifyParen(p, en) {
+  const s = p.trim(); const low = s.toLowerCase(); const words = s.split(/\s+/);
+  if (/pron[uú]ncia|\bsom\b|sound/.test(low)) return 'pron';
+  if (/passado|past|partic[ií]pio|plural|singular|irregular|regular/.test(low)) return 'note';
+  if (/^(da|de|do|das|dos|na|no|nas|nos|em|para|com|o|a|os|as|um|uma|ou)\b/.test(low)) return 'pt';
+  if (words.length <= 2 && /[ãâáàéêíóôõúç]/i.test(s)) return 'pron';
+  if (words.length === 1 && s.length <= 5 && !/(ar|er|ir|ção)$/.test(low) && lev(norm(s), norm(en)) <= 2) return 'pron';
+  return 'pt';
+}
+const fixEn = (s) => { s = String(s || '').trim().replace(/[:;]+$/, ''); return /^I\b/.test(s) ? s : s.charAt(0).toLowerCase() + s.slice(1); };
+function splitEntry(left, right) {
+  const L = takeParens(left); const R = takeParens(right);
+  const enAlts = L.text.split(/\s*[\/,]\s*/).map((s) => s.trim()).filter(Boolean);
+  const ptAlts = R.text ? R.text.split(/\s*\/\s*/).map((s) => s.trim()).filter(Boolean) : [];
+  const out = [];
+  if (enAlts.length > 1 && enAlts.length === ptAlts.length) enAlts.forEach((e, k) => out.push({ id: '', t: 'word', en: fixEn(e), pt: ptAlts[k] }));
+  else {
+    const it = { id: '', t: 'word', en: fixEn(enAlts.join(' / ')), pt: R.text };
+    if (enAlts.length > 1) it.alt = enAlts.map((a) => stripMarks(fixEn(a)));
+    out.push(it);
+  }
+  const enNotes = L.parens.map((p) => (/^-?ed$/i.test(p) ? 'Verbo regular: passado com -ed.' : p));
+  for (const it of out) {
+    const notes = [...enNotes]; const ptExtra = [];
+    for (const p of R.parens) {
+      const kind = classifyParen(p, stripMarks(it.en));
+      if (kind === 'pron') it.pron = p; else if (kind === 'note') notes.push(p); else ptExtra.push(p);
+    }
+    if (ptExtra.length) it.pt = (it.pt + ' ' + ptExtra.map((x) => '(' + x + ')').join(' ')).trim();
+    if (notes.length) it.note = notes.join(' · ');
+  }
+  return out;
+}
+function parseNotes(paras) {
+  const items = []; const texts = []; const links = []; let block = null;
+  const lines = paras.map((s) => String(s || '').replace(/ /g, ' ').replace(/[ \t]+/g, ' ').trim());
+  for (const line of lines) {
+    if (!line) { block = null; continue; }
+    const plain = stripMarks(line);
+    const urls = plain.match(/https?:\/\/[^\s)>\]]+/g);
+    if (urls) { urls.forEach((u) => links.push({ url: u.replace(/[.,;]+$/, ''), title: '', done: false })); if (plain.replace(/https?:\/\/[^\s)>\]]+/g, '').trim().length < 4) continue; }
+    if (/^english class\b/i.test(plain) && !SEP.test(plain)) continue;
+    if (SEP.test(line)) {
+      block = null;
+      const parts = line.split(SEP); const left = parts.shift(); const right = parts.join(' → ');
+      if (stripMarks(left).trim()) items.push(...splitEntry(left, right));
+      continue;
+    }
+    const words = plain.split(/\s+/);
+    if (words.length <= 3 && plain.length <= 32 && !/[.!?]$/.test(plain)) { items.push({ id: '', t: 'word', en: fixEn(line), pt: '' }); continue; }
+    if (!block) { block = { title: texts.length ? 'Texto ' + (texts.length + 1) : 'Texto da aula', lines: [] }; texts.push(block); }
+    block.lines.push(line);
+  }
+  const seen = new Set(); const uniq = [];
+  for (const it of items) { const k = norm(stripMarks(it.en)) + '|' + norm(it.pt); if (seen.has(k)) continue; seen.add(k); uniq.push(it); }
+  return { items: uniq, texts, links };
+}
+function assignIds(items, oldItems = []) {
+  const used = new Set(); const olds = oldItems.slice();
+  for (const it of items) {
+    let id = '';
+    const match = olds.find((o) => !used.has(o.id) && o.t === it.t && (o.id === it.id || norm(stripMarks(o.en)) === norm(stripMarks(it.en)) || (it.t !== 'concept' && overlapAns(o, it))));
+    if (match) id = match.id;
+    if (!id) id = it.id && !used.has(it.id) ? it.id : (it.t === 'concept' ? 'c-' : '') + slug(it.t === 'concept' ? it.en : ((it.alt && it.alt[0]) || it.en));
+    let k = 2; const base = id; while (used.has(id)) id = base + '-' + k++;
+    used.add(id); it.id = id;
+  }
+  return items;
+}
+/* ---------- import UI ---------- */
+function openImport(lid) {
+  IMP.editing = lid || null; IMP.err = ''; IMP.note = ''; IMP.busy = false; IMP.confirmOverwrite = false;
+  if (lid) {
+    const L = S.lessons.get(lid); if (!L) return;
+    IMP.draft = { num: L.num || '', date: L.date || dayKey(), file: L.file || '', items: JSON.parse(JSON.stringify(L.items || [])), texts: JSON.parse(JSON.stringify(L.texts || [])), links: (L.links || []).map((x) => ({ ...x })), raw: L.raw || '', ai: !!L.ai, createdAt: L.createdAt };
+    renderImportEditor();
+  } else { IMP.draft = null; renderImportStart(); }
+}
+function renderImportStart(msg = '') {
+  openSheet(`${sheetHead('Nova aula', 'Depois de cada aula')}
+    <p class="meta">Envie o arquivo .docx que o professor mandou. O app separa as palavras, cria frases de exemplo e deixa a aula nova como prioridade nos treinos.</p>
+    <label class="drop" id="imp-drop">
+      <input type="file" id="imp-file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+      ${IC.file.replace('<svg', '<svg width="34" height="34"')}
+      <b>Escolher arquivo .docx</b>
+      <span class="meta">No celular: salve o arquivo do WhatsApp ou e-mail em Arquivos e escolha aqui.</span>
+    </label>
+    <p id="imp-status" class="meta" role="status">${esc(msg)}</p>
+    <details class="raw"><summary>Não tem o arquivo? Cole o texto da aula</summary>
+      <div class="fgroup" style="margin-top:10px"><textarea class="field sm" id="imp-text" rows="8" placeholder="Wrist -> pulso (da mão)&#10;Deadline -> prazo"></textarea>
+      <div class="row-actions"><button class="btn" data-act="imp-paste">Usar este texto</button></div></div>
+    </details>`, 'full');
+  const inp = $('#imp-file'); inp.addEventListener('change', () => { if (inp.files && inp.files[0]) onImportFile(inp.files[0]); });
+  const drop = $('#imp-drop');
+  drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+  drop.addEventListener('drop', (e) => { e.preventDefault(); drop.classList.remove('over'); const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]; if (f) onImportFile(f); });
+}
+async function onImportFile(file) {
+  const st = $('#imp-status');
+  if (!/\.docx$/i.test(file.name)) { if (st) st.textContent = 'Escolha um arquivo do Word (.docx).'; return; }
+  if (st) st.innerHTML = '<span class="thinking">Lendo o arquivo…</span>';
+  try {
+    const { paras, created } = await readDocx(file);
+    startDraft(paras, { num: classNumFrom(file.name), date: created || dayKey(), file: file.name });
+  } catch (e) {
+    console.warn(e);
+    if (st) st.textContent = 'Não consegui ler este arquivo. Confira se é um .docx do Word ou cole o texto abaixo.';
+  }
+}
+function classNumFrom(name) {
+  const base = String(name || '').replace(/\.docx$/i, '');
+  const m = base.match(/(?:class|aula|lesson)\s*[#nº°._-]*\s*(\d{1,4})/i) || base.match(/(\d{1,4})(?!.*\d)/);
+  return m ? Number(m[1]) : '';
+}
+function startDraft(paras, meta) {
+  const { items, texts, links } = parseNotes(paras);
+  IMP.draft = { num: meta.num || '', date: meta.date || dayKey(), file: meta.file || '', items: assignIds(items), texts, links, raw: paras.join('\n').trim().slice(0, 20000), ai: false };
+  const id = lessonId(IMP.draft.num, IMP.draft.date);
+  IMP.note = S.lessons.has(id) ? `Já existe a ${lessonName(S.lessons.get(id))}. Ao salvar, ela será substituída (o progresso das palavras iguais é mantido).` : '';
+  renderImportEditor();
+  if (aiOn()) aiEnrich();
+}
+function readEditor() {
+  const d = IMP.draft; if (!d || !$('#imp-num')) return;
+  d.num = $('#imp-num').value.trim(); d.date = $('#imp-date').value || d.date;
+  $$('.edit-item[data-k]').forEach((row) => {
+    const it = d.items[Number(row.dataset.k)]; if (!it) return;
+    row.querySelectorAll('[data-f]').forEach((f) => { it[f.dataset.f] = f.value; });
+  });
+  const lk = $('#imp-links');
+  if (lk) {
+    const prev = new Map((d.links || []).map((x) => [x.url, x]));
+    d.links = lk.value.split(/\n+/).map((s) => normUrl(s)).filter(Boolean).map((u) => prev.get(u) || { url: u, title: '', done: false });
+  }
+}
+function renderImportEditor() {
+  const d = IMP.draft; if (!d) return;
+  const words = d.items.map((it, k) => ({ it, k })).filter((x) => x.it.t !== 'concept');
+  const concepts = d.items.map((it, k) => ({ it, k })).filter((x) => x.it.t === 'concept');
+  const missing = words.filter((x) => !String(x.it.pt || '').trim()).length;
+  const aiBox = IMP.busy
+    ? `<div class="notice ex-row" style="justify-content:space-between"><span class="thinking">A IA está organizando as palavras e criando exemplos…</span><button class="btn small" data-act="imp-stop">Parar</button></div>`
+    : aiOn()
+      ? `<div class="notice ex-row" style="justify-content:space-between"><span>${d.ai ? 'Organizado pela IA: confira e ajuste o que quiser.' : 'A IA pode separar as palavras, completar traduções e criar frases de exemplo e exercícios de gramática.'}${IMP.err ? ' ' + esc(IMP.err) : ''}</span><button class="btn small" data-act="imp-ai">${IC.spark} ${d.ai ? 'Refazer com IA' : 'Organizar com IA'}</button></div>`
+      : `<p class="notice">${esc(aiNotice() || 'A IA não está disponível agora.')} Revise as palavras abaixo e salve; os exercícios de frase usam só as palavras com exemplo.</p>`;
+  const wordRows = words.map(({ it, k }) => `<div class="edit-item" data-k="${k}">
+      <input class="field sm" data-f="en" value="${esc(it.en)}" aria-label="Inglês" placeholder="inglês">
+      <input class="field sm" data-f="pt" value="${esc(it.pt || '')}" aria-label="Português" placeholder="tradução" ${!String(it.pt || '').trim() ? 'style="border-color:var(--red)"' : ''}>
+      <button class="icon-btn" data-act="imp-del" data-k="${k}" aria-label="Remover">${IC.trash}</button>
+      <input class="field sm full" data-f="note" value="${esc(it.note || '')}" aria-label="Dica" placeholder="dica (opcional)">
+      ${it.pron ? `<p class="pron full">Pronúncia: <b>${esc(it.pron)}</b></p>` : ''}
+      ${it.ex ? `<p class="meta full">${esc(it.ex)} <span class="muted">· ${esc(it.exPt || '')}</span></p>` : ''}
+    </div>`).join('');
+  const conceptRows = concepts.map(({ it, k }) => `<div class="edit-item concept"><div class="full"><b>${esc(it.en)}</b><p class="meta">${esc(it.pt)} · ${(it.drills || []).length} exercícios</p></div>
+      <button class="icon-btn" data-act="imp-del" data-k="${k}" aria-label="Remover">${IC.trash}</button></div>`).join('');
+  const texts = (d.texts || []).map((tx) => `<div class="textblock">${(tx.lines || []).map((l) => `<p>${hl(l)}</p>`).join('')}</div>`).join('');
+  openSheet(`${sheetHead(IMP.editing ? 'Editar ' + esc(lessonName(S.lessons.get(IMP.editing))) : 'Revisar a aula nova', esc(d.file || 'Texto colado'))}
+    <div class="grid2">
+      <label class="fgroup"><span>Número da aula</span><input class="field sm" id="imp-num" type="number" inputmode="numeric" value="${esc(d.num)}" placeholder="ex.: 43"></label>
+      <label class="fgroup"><span>Data</span><input class="field sm" id="imp-date" type="date" value="${esc(d.date)}"></label>
+    </div>
+    ${IMP.note ? `<p class="notice warn">${esc(IMP.note)}</p>` : ''}
+    ${aiBox}
+    <div class="section-title" style="margin:6px 0 0"><h3>Palavras e expressões</h3><span class="meta">${words.length}${missing ? ` · <b style="color:var(--red)">${missing} sem tradução</b>` : ''}</span></div>
+    <div class="edit-items">${wordRows || '<p class="meta">Nenhuma palavra encontrada no formato “word -> significado”. Use a IA ou adicione abaixo.</p>'}</div>
+    <div class="row-actions"><button class="btn small" data-act="imp-add">${IC.plus} Adicionar palavra</button></div>
+    ${conceptRows ? `<div class="section-title" style="margin:6px 0 0"><h3>Gramática e pronúncia</h3><span class="meta">${concepts.length}</span></div><div class="edit-items">${conceptRows}</div>` : ''}
+    ${texts ? `<div class="section-title" style="margin:6px 0 0"><h3>Textos da aula</h3></div>${texts}` : ''}
+    <label class="fgroup"><span>Links da aula (um por linha)</span><textarea class="field sm" id="imp-links" rows="2" placeholder="https://test-english.com/...">${esc((d.links || []).map((x) => x.url).join('\n'))}</textarea></label>
+    <p id="imp-status" class="meta" role="status"></p>
+    <div class="row-actions"><button class="btn primary big" data-act="imp-save" ${IMP.busy ? 'disabled' : ''}>Salvar aula</button><button class="btn ghost" data-act="close-sheet">Cancelar</button></div>`, 'full');
+}
+async function aiEnrich() {
+  const d = IMP.draft; if (!d || !aiOn()) return;
+  readEditor();
+  IMP.ctl = new AbortController(); IMP.busy = true; IMP.err = ''; IMP.progress = 0; renderImportEditor();
+  const known = S.items.filter((i) => i.t !== 'concept' && i.lid !== IMP.editing).map((i) => stripMarks(i.en)).slice(-150);
+  const draft = d.items.filter((i) => i.t !== 'concept').map((i) => ({ en: i.en, pt: i.pt || '', note: i.note || undefined, pron: i.pron || undefined }));
+  const raw = (d.raw || draft.map((x) => x.en + ' -> ' + x.pt).join('\n')).slice(0, 7000);
+  const prompt = `You are helping a Brazilian adult (English level A1–A2) turn his English teacher's class notes into study cards.
+
+CLASS NOTES (text between ⟦ ⟧ was highlighted by the teacher):
+"""
+${raw}
+"""
+
+DRAFT CARDS parsed automatically from the notes (may contain mistakes):
+${JSON.stringify(draft)}
+
+Words from earlier classes that the student already knows (reuse some of them in the example sentences when natural):
+${known.join(', ') || '(none yet)'}
+
+Reply with only a JSON object in this shape:
+{"items":[{"en":"","pt":"","alt":[""],"pron":"","note":"","ex":"","exPt":"","cl":""}],
+ "concepts":[{"title":"","explain":"","examples":[""],"drills":[{"q":"","a":[""],"opts":[""],"pt":""}]}]}
+
+Rules for "items":
+- One item for each vocabulary entry in the notes, in the same order. Do not add vocabulary that is not in the notes. Sentences that are only examples, texts or poems are not items.
+- "en": the English word or expression as the student should learn it: lowercase (except "I" and names); keep "to" before verbs when the teacher wrote it; keep the ⟦ ⟧ marks when the teacher highlighted part of the word.
+- Split an entry into separate items only when it pairs different words with different meanings (e.g. "upstairs / downstairs -> piso de cima / piso de baixo"). Synonyms with one meaning stay in one item (e.g. "goal / target / objective").
+- "pt": the Brazilian Portuguese meaning, short, as the teacher wrote it; fill it in when it is missing.
+- "alt": every English answer that should be accepted when the student types it (synonyms; with and without "to").
+- "pron": the teacher's pronunciation hint written the Portuguese way (like "sãn"), otherwise "".
+- "note": a short, useful tip in Brazilian Portuguese (irregular past, silent letters, confusing pairs, usage), max 90 characters, otherwise "".
+- "ex": one short, natural example sentence (A1–A2, max 12 words) using the item; "exPt": its Brazilian Portuguese translation; "cl": the exact part of "ex" that is the item, as written in the sentence (e.g. "pay off" in "Your hard work will pay off.").
+
+Rules for "concepts" (may be an empty list):
+- Only grammar or pronunciation points that the notes actually teach: highlighted corrections, contrasted pairs (bad / badly), words that sound the same, irregular forms.
+- "title": a short name. "explain": 1–3 short sentences in Brazilian Portuguese. "examples": 2 short English sentences.
+- "drills": 4 fill-in-the-blank sentences using "____" where the answer goes; "a": the correct answer(s); "opts": 2 or 3 options including the correct one; "pt": the Brazilian Portuguese translation of the full sentence.`;
+  try {
+    const t0 = now();
+    const tick = setInterval(() => { const el = $('.sheet .thinking'); if (el && IMP.busy) el.textContent = `A IA está organizando as palavras e criando exemplos (${Math.round((now() - t0) / 1000)} s)…`; }, 1000);
+    let r; try { r = await AI.json(prompt, { tier: 'default', signal: IMP.ctl.signal }); } finally { clearInterval(tick); }
+    const items = sanitizeAi(r);
+    if (!items.filter((i) => i.t !== 'concept').length) throw { code: 'invalid_json' };
+    const old = IMP.editing ? (S.lessons.get(IMP.editing).items || []) : d.items;
+    d.items = assignIds(items, old); d.ai = true;
+  } catch (e) {
+    if (!(e && e.code === 'cancelled')) IMP.err = aiErrMsg(e);
+  }
+  IMP.busy = false; IMP.ctl = null;
+  if (!$('#layer-sheet').hidden && IMP.draft === d) renderImportEditor();
+}
+function sanitizeAi(r) {
+  const out = [];
+  for (const x of (r && Array.isArray(r.items) ? r.items : [])) {
+    const en = String((x && x.en) || '').trim(); const pt = String((x && x.pt) || '').trim(); if (!en || !pt) continue;
+    const it = { id: '', t: 'word', en: en.slice(0, 80), pt: pt.slice(0, 120) };
+    const alt = (Array.isArray(x.alt) ? x.alt : []).map((s) => String(s || '').trim()).filter(Boolean); if (alt.length) it.alt = alt.slice(0, 8);
+    for (const k of ['pron', 'note', 'ex', 'exPt']) { const v = String(x[k] || '').trim(); if (v) it[k] = v.slice(0, 220); }
+    const cl = String(x.cl || '').trim(); if (cl && it.ex && it.ex.includes(cl)) it.cl = cl;
+    out.push(it);
+  }
+  for (const c of (r && Array.isArray(r.concepts) ? r.concepts : [])) {
+    const title = String((c && c.title) || '').trim(); const explain = String((c && c.explain) || '').trim(); if (!title || !explain) continue;
+    const drills = [];
+    for (const d of (Array.isArray(c.drills) ? c.drills : [])) {
+      const q = String((d && d.q) || ''); if (!q.includes('____')) continue;
+      const a = (Array.isArray(d.a) ? d.a : [d.a]).map((s) => String(s || '').trim()).filter(Boolean); if (!a.length) continue;
+      let opts = (Array.isArray(d.opts) ? d.opts : []).map((s) => String(s || '').trim()).filter(Boolean);
+      if (!opts.some((o) => norm(o) === norm(a[0]))) opts = [a[0], ...opts];
+      opts = [...new Map(opts.map((o) => [norm(o), o])).values()].slice(0, 4);
+      if (opts.length < 2) continue;
+      drills.push({ q: q.slice(0, 160), a, opts, pt: String(d.pt || '').trim().slice(0, 160) });
+    }
+    if (!drills.length) continue;
+    out.push({ id: '', t: 'concept', en: title.slice(0, 80), pt: explain.slice(0, 400), examples: (Array.isArray(c.examples) ? c.examples : []).map(String).filter(Boolean).slice(0, 3), drills: drills.slice(0, 6) });
+  }
+  return out;
+}
+async function importSave(btn) {
+  readEditor();
+  const d = IMP.draft; const st = $('#imp-status');
+  const num = parseInt(d.num, 10) || null; const date = /^\d{4}-\d{2}-\d{2}$/.test(d.date) ? d.date : dayKey();
+  const items = d.items.filter((i) => i.t === 'concept' || stripMarks(i.en).trim());
+  if (!items.length) { st.textContent = 'Adicione pelo menos uma palavra.'; return; }
+  const missing = items.filter((i) => i.t !== 'concept' && !String(i.pt || '').trim()).length;
+  if (missing) { st.textContent = `Preencha a tradução de ${missing} ${missing === 1 ? 'palavra' : 'palavras'} (em vermelho) ou use a IA.`; return; }
+  const id = IMP.editing || lessonId(num, date);
+  if (!IMP.editing && S.lessons.has(id) && !IMP.confirmOverwrite) { IMP.confirmOverwrite = true; st.textContent = `Já existe a ${lessonName(S.lessons.get(id))}. Toque em Salvar de novo para substituir.`; return; }
+  const old = S.lessons.has(id) ? (S.lessons.get(id).items || []) : [];
+  const clean = assignIds(items.map((i) => {
+    const x = { ...i, en: String(i.en).trim(), pt: String(i.pt || '').trim() };
+    if (x.t !== 'concept') { if (x.ex && !(x.cl && x.ex.includes(x.cl))) { const c = findCl({ ...x, cl: '' }); if (c) x.cl = c; else delete x.cl; } }
+    Object.keys(x).forEach((k) => { if (x[k] === '' || x[k] === undefined) delete x[k]; });
+    return x;
+  }), old);
+  const prev = S.lessons.get(id);
+  const lesson = { v: 1, num, date, file: d.file || '', items: clean, texts: d.texts || [], links: d.links || [], raw: (d.raw || '').slice(0, 20000), createdAt: (prev && prev.createdAt) || d.createdAt || now(), ai: !!d.ai };
+  if (btn) btn.disabled = true;
+  try {
+    await saveLesson(id, lesson);
+    closeSheet(); S.tab = 'lessons'; lsSet('tab', 'lessons'); S.lessonOpen = id; renderShell(); render(); window.scrollTo(0, 0);
+    toast(IMP.editing ? 'Aula atualizada.' : 'Aula salva. Ela já é prioridade no treino do dia.');
+  } catch (e) {
+    console.warn(e); if (btn) btn.disabled = false;
+    st.textContent = e && e.code === 'quota_exceeded' ? 'O espaço do banco de dados acabou. Exclua aulas antigas para liberar.' : 'Não consegui salvar agora. Tente de novo em instantes.';
+  }
+}
+const XACT = {
+  'imp-ai': () => aiEnrich(),
+  'imp-stop': () => { if (IMP.ctl) IMP.ctl.abort(); },
+  'imp-add': () => { readEditor(); IMP.draft.items.push({ id: '', t: 'word', en: '', pt: '' }); renderImportEditor(); const rows = $$('.edit-item[data-k] [data-f="en"]'); if (rows.length) rows[rows.length - 1].focus(); },
+  'imp-del': (el) => { readEditor(); IMP.draft.items.splice(Number(el.dataset.k), 1); renderImportEditor(); },
+  'imp-save': (el) => importSave(el),
+  'imp-paste': () => {
+    const v = ($('#imp-text') || {}).value || ''; if (!v.trim()) { toast('Cole o texto da aula primeiro.'); return; }
+    startDraft(v.replace(/-\\>/g, '->').split(/\r?\n/), { num: '', date: dayKey(), file: '' });
+  },
+};
+const XFORM = {};
+/* ================= speech (text to speech) ================= */
+const TTS = {
+  ok: typeof window.speechSynthesis !== 'undefined' && typeof window.SpeechSynthesisUtterance !== 'undefined',
+  voices: [], voice: null, voiceB: null, pt: null, rate: Number(lsGet('rate', 0.9)) || 0.9,
+};
+function voiceScore(v) {
+  let s = 0;
+  if (/en[-_]US/i.test(v.lang)) s += 5;
+  if (/google us english/i.test(v.name)) s += 6;
+  if (/natural|neural|online|enhanced|premium/i.test(v.name)) s += 4;
+  if (/samantha|aria|jenny|ava|allison|guy|andrew|emma|brian|zira|david/i.test(v.name)) s += 2;
+  return s;
+}
+function loadVoices() {
+  if (!TTS.ok) return;
+  let all = []; try { all = speechSynthesis.getVoices() || []; } catch (e) { all = []; }
+  const en = all.filter((v) => /^en([-_]|$)/i.test(v.lang)).sort((a, b) => voiceScore(b) - voiceScore(a));
+  TTS.voices = en;
+  const saved = lsGet('voice', '');
+  TTS.voice = en.find((v) => v.name === saved) || en[0] || null;
+  TTS.voiceB = en.find((v) => v !== TTS.voice && TTS.voice && v.lang === TTS.voice.lang) || en.find((v) => v !== TTS.voice) || TTS.voice;
+  TTS.pt = all.find((v) => /^pt[-_]BR/i.test(v.lang)) || all.find((v) => /^pt/i.test(v.lang)) || null;
+}
+if (TTS.ok) { loadVoices(); try { speechSynthesis.addEventListener('voiceschanged', loadVoices); } catch (e) { speechSynthesis.onvoiceschanged = loadVoices; } }
+let speakGen = 0;
+function speak(text, o = {}) {
+  const txt = stripMarks(text || '').trim();
+  if (!TTS.ok || !txt) { if (o.onend) setTimeout(o.onend, 0); return; }
+  const gen = ++speakGen;
+  const u = new SpeechSynthesisUtterance(txt);
+  const v = o.voice || (o.lang === 'pt' ? TTS.pt : TTS.voice);
+  if (v) { u.voice = v; u.lang = v.lang; } else u.lang = o.lang === 'pt' ? 'pt-BR' : 'en-US';
+  u.rate = o.rate || (o.lang === 'pt' ? 1.05 : TTS.rate);
+  let done = false;
+  const fin = () => { if (done) return; done = true; if (gen === speakGen && o.onend) o.onend(); };
+  u.onend = fin; u.onerror = fin;
+  const go = () => { try { speechSynthesis.speak(u); if (speechSynthesis.paused) speechSynthesis.resume(); } catch (e) { fin(); } };
+  try {
+    if (speechSynthesis.speaking || speechSynthesis.pending) { speechSynthesis.cancel(); setTimeout(() => { if (gen === speakGen) go(); }, 60); }
+    else go();
+  } catch (e) { fin(); }
+}
+function speechStop() { speakGen++; if (!TTS.ok) return; try { speechSynthesis.cancel(); } catch (e) { /* ignore */ } }
+function aiErrMsg(e) {
+  const c = e && e.code;
+  if (c === 'no_backend') return 'Conecte o app à sua planilha (Ajustes) para usar a IA.';
+  if (c === 'no_key') { S.meta.hasKey = false; persist(); return 'A chave do Gemini ainda não foi configurada. Na planilha: menu Fichário > 2. Configurar chave do Gemini.'; }
+  if (c === 'bad_key') return 'O Google recusou a chave do Gemini. Configure a chave de novo na planilha (menu Fichário).';
+  if (c === 'quota') return 'O limite gratuito do Gemini acabou por agora. Tente de novo mais tarde (o limite diário renova de madrugada).';
+  if (c === 'unauthorized') return 'O código de acesso não foi aceito. Conecte de novo pelo link da planilha.';
+  if (c === 'network') return navigator.onLine ? 'Não consegui falar com o servidor. Tente de novo.' : 'Sem internet agora. A IA volta quando você estiver online.';
+  if (c === 'blocked') return 'A IA não respondeu a esse pedido. Tente escrever de outro jeito.';
+  if (c === 'invalid_json' || c === 'empty' || c === 'too_long') return 'A resposta da IA veio incompleta. Tente de novo.';
+  if (c === 'bad_response') return 'O servidor respondeu de um jeito inesperado. Confira se o app da Web está publicado para qualquer pessoa.';
+  return 'Não consegui falar com a IA agora. Tente de novo.';
+}
+function parseJsonLoose(text) {
+  const t = String(text || '').trim();
+  try { return JSON.parse(t); } catch (e) { /* next */ }
+  const f = t.match(/```(?:json)?\s*([\s\S]*?)```/); if (f) { try { return JSON.parse(f[1]); } catch (e) { /* next */ } }
+  const i = t.search(/[[{]/); const j = Math.max(t.lastIndexOf('}'), t.lastIndexOf(']'));
+  if (i >= 0 && j > i) { try { return JSON.parse(t.slice(i, j + 1)); } catch (e) { /* fall through */ } }
+  throw { code: 'invalid_json', text: t };
+}
+const AI = {
+  async json(input, opts = {}) {
+    const payload = typeof input === 'string' ? { prompt: input } : { system: input.system, messages: input.messages };
+    const r = await api('ai', { ...payload, json: true, tier: opts.tier || 'default' }, { signal: opts.signal });
+    if (S.meta.hasKey !== true) { S.meta.hasKey = true; persist(); }
+    return parseJsonLoose(r.text);
+  },
+};
+
+/* ================= listen tab ================= */
+const PL = { on: false, list: [], i: 0, src: lsGet('pl-src', 'latest'), pt: lsGet('pl-pt', true), rep: lsGet('pl-rep', false), wake: null, timer: 0 };
+const TX = { type: lsGet('tx-type', 'dialogue'), focus: lsGet('tx-focus', 'latest'), busy: false, ctl: null, err: '', listenFirst: lsGet('tx-first', false), showText: true, showPt: false, playing: -1, def: '', answers: {}, rate: Number(lsGet('tx-rate', 0.85)) || 0.85, on: false };
+function renderListen() {
+  if (!S.lessonList.length) return emptyState();
+  const L = S.lessons.get(S.latest);
+  return `<div class="screen-head"><div><h1>Ouvir</h1><p class="meta">Treine o ouvido com as palavras das suas aulas, no seu ritmo.</p></div></div>
+    ${TTS.ok ? '' : '<p class="notice warn" style="margin-bottom:14px">Este navegador não tem leitura em voz alta. Abra no Chrome, Edge ou Safari para ouvir.</p>'}
+    <div class="listen-grid">
+      <div class="stack">
+        <section class="panel" id="pl-box">
+          <div class="panel-head"><h2>Ouvir sem parar</h2><span class="label">fone de ouvido</span></div>
+          <p class="meta">Ouve a palavra, a frase de exemplo mais devagar e a tradução. Bom para ouvir enquanto trabalha.</p>
+          <div class="seg" role="group" aria-label="O que ouvir">
+            ${[['latest', 'Só a ' + lessonName(L)], ['weak', 'Mais fracas'], ['all', 'Todas as aulas']].map(([v, l]) => `<button data-act="pl-src" data-v="${v}" aria-pressed="${PL.src === v}">${esc(l)}</button>`).join('')}
+          </div>
+          <div class="now-card" id="pl-now" aria-live="polite">${plNowHTML()}</div>
+          <div class="ctrls">
+            <button class="icon-btn" data-act="pl-prev" aria-label="Anterior">${IC.prev}</button>
+            <button class="play" style="width:64px;height:64px" data-act="pl-toggle" id="pl-btn" aria-label="${PL.on ? 'Pausar' : 'Ouvir'}">${PL.on ? IC.pause : IC.play}</button>
+            <button class="icon-btn" data-act="pl-next" aria-label="Próxima">${IC.next}</button>
+          </div>
+          <label class="check"><input type="checkbox" id="pl-pt" data-act="pl-opt" ${PL.pt ? 'checked' : ''} ${TTS.pt ? '' : 'disabled'}> Falar a tradução em português${TTS.pt ? '' : ' (sem voz em português neste aparelho)'}</label>
+          <label class="check"><input type="checkbox" id="pl-rep" data-act="pl-opt" ${PL.rep ? 'checked' : ''}> Repetir a frase de exemplo duas vezes</label>
+        </section>
+        <section class="panel">
+          <h2>Treino de escuta</h2>
+          <p class="meta">Exercícios só de ouvido: ouvir e escolher, ouvir e escrever a palavra e ditado de frases. Conta no índice de reforço.</p>
+          <div class="row-actions"><button class="btn primary" data-act="start" data-mode="listen" ${TTS.ok ? '' : 'disabled'}>Começar treino de escuta</button></div>
+        </section>
+      </div>
+      <section class="panel" id="tx-box">${textSectionHTML()}</section>
+    </div>`;
+}
+function afterListenRender() { /* dados já estão no aparelho */ }
+function refreshListenLight() { /* keep the player and text intact while data syncs */ }
+function plNowHTML() {
+  const it = S.byGid.get(PL.list[PL.i]);
+  if (!it) return '<p class="meta">Toque em ouvir para começar.</p>';
+  return `<p class="label">${PL.i + 1} de ${PL.list.length} · ${esc(lessonName(S.lessons.get(it.lid)))}</p>
+    <p class="w">${hl(it.en)}</p><p class="p">${esc(it.pt)}</p>
+    ${it.ex ? `<p class="s">${markCl(it)}</p><p class="p">${esc(it.exPt || '')}</p>` : ''}`;
+}
+function plRefresh() {
+  const n = $('#pl-now'); if (n) n.innerHTML = plNowHTML();
+  const b = $('#pl-btn'); if (b) { b.innerHTML = PL.on ? IC.pause : IC.play; b.setAttribute('aria-label', PL.on ? 'Pausar' : 'Ouvir'); }
+}
+function plBuild() {
+  const t = now(); let items = S.items.filter((i) => i.t !== 'concept');
+  if (PL.src === 'latest') items = items.filter((i) => i.lid === S.latest);
+  else if (PL.src === 'weak') { items = items.filter((i) => !isNew(i)).sort((a, b) => reforco(a.p, t) - reforco(b.p, t)).slice(0, 20); if (!items.length) items = S.items.filter((i) => i.t !== 'concept' && i.lid === S.latest); }
+  else items = shuffle(items).slice(0, 60);
+  PL.list = items.map((i) => i.gid); PL.i = 0;
+}
+async function requestWake() { try { if (navigator.wakeLock && document.visibilityState === 'visible') PL.wake = await navigator.wakeLock.request('screen'); } catch (e) { PL.wake = null; } }
+function releaseWake() { try { if (PL.wake) PL.wake.release(); } catch (e) { /* ignore */ } PL.wake = null; }
+function plPlay() {
+  if (!TTS.ok) return; txStop();
+  if (!PL.list.length) plBuild();
+  if (!PL.list.length) { toast('Nada para ouvir ainda.'); return; }
+  PL.on = true; requestWake(); plStep();
+}
+function plStop() { clearTimeout(PL.timer); if (!PL.on) return; PL.on = false; speechStop(); releaseWake(); plRefresh(); }
+function plStep() {
+  if (!PL.on) return;
+  if (PL.i >= PL.list.length || PL.i < 0) PL.i = 0;
+  const it = S.byGid.get(PL.list[PL.i]); if (!it) { PL.list.splice(PL.i, 1); if (!PL.list.length) { plStop(); return; } plStep(); return; }
+  const en = stripMarks(it.en).replace(/ \/ /g, ', ');
+  const slow = Math.min(TTS.rate, 0.85);
+  const seq = [{ t: en }, { t: en, rate: 0.7 }];
+  if (it.ex) { seq.push({ t: it.ex, rate: slow }); if (PL.rep) seq.push({ t: it.ex, rate: slow }); }
+  if (PL.pt && TTS.pt) seq.push({ t: String(it.pt).replace(/\//g, ',') + '. ' + (it.exPt || ''), lang: 'pt' });
+  plRefresh();
+  runSeq(seq, 0, () => { if (!PL.on) return; PL.i = (PL.i + 1) % PL.list.length; PL.timer = setTimeout(plStep, 1200); });
+}
+function runSeq(seq, k, done) {
+  if (!PL.on) return;
+  if (k >= seq.length) { done(); return; }
+  const s = seq[k];
+  speak(s.t, { rate: s.rate, lang: s.lang, onend: () => { if (!PL.on) return; PL.timer = setTimeout(() => runSeq(seq, k + 1, done), 700); } });
+}
+/* ---------- AI text ---------- */
+function pickTargets(focus, n) {
+  const t = now(); const words = S.items.filter((i) => i.t !== 'concept');
+  let pool;
+  if (focus === 'weak') {
+    pool = words.filter((i) => !isNew(i)).sort((a, b) => reforco(a.p, t) - reforco(b.p, t)).slice(0, n);
+    if (pool.length < 3) pool = words.slice().sort((a, b) => priority(b, t, '') - priority(a, t, '')).slice(0, n);
+  } else if (focus === 'all') pool = shuffle(words).slice(0, n);
+  else {
+    const latest = shuffle(words.filter((i) => i.lid === S.latest)).sort((a, b) => reforco(a.p, t) - reforco(b.p, t)).slice(0, Math.max(3, n - 2));
+    const older = words.filter((i) => i.lid !== S.latest).sort((a, b) => priority(b, t, '') - priority(a, t, '')).slice(0, n - latest.length);
+    pool = [...latest, ...older];
+  }
+  return pool;
+}
+function textSectionHTML() {
+  const d = S.ai.text; const ai = aiOn();
+  const head = `<div class="panel-head"><h2>Texto com suas palavras</h2><span class="label">IA</span></div>`;
+  if (!ai) return head + `<p class="notice">${esc(aiNotice())} Com a IA, o app cria diálogos e histórias com as palavras das suas aulas para você ler e ouvir.</p>`;
+  const controls = `<p class="meta">A IA escreve um texto curto usando as palavras da última aula e as que você mais precisa reforçar.</p>
+    <div class="seg" role="group" aria-label="Tipo de texto">${[['dialogue', 'Diálogo'], ['story', 'História'], ['message', 'Mensagem']].map(([v, l]) => `<button data-act="tx-type" data-v="${v}" aria-pressed="${TX.type === v}">${l}</button>`).join('')}</div>
+    <div class="seg" role="group" aria-label="Palavras">${[['latest', 'Última aula'], ['weak', 'Mais fracas'], ['all', 'Misturar']].map(([v, l]) => `<button data-act="tx-focus" data-v="${v}" aria-pressed="${TX.focus === v}">${l}</button>`).join('')}</div>
+    <label class="check"><input type="checkbox" id="tx-first" data-act="tx-first" ${TX.listenFirst ? 'checked' : ''}> Ouvir primeiro (o texto aparece depois)</label>
+    <div class="row-actions">${TX.busy ? `<span class="thinking">Escrevendo o texto…</span><button class="btn small" data-act="tx-stop">Parar</button>` : `<button class="btn primary" data-act="tx-gen">${IC.spark} ${d ? 'Criar outro texto' : 'Criar texto'}</button>`}</div>
+    ${TX.err ? `<p class="notice warn">${esc(TX.err)}</p>` : ''}`;
+  if (!d) return head + controls;
+  const targets = (d.targets || []).map((g) => S.byGid.get(g)).filter(Boolean);
+  const lines = (d.lines || []).map((l, k) => `<div class="sline${TX.playing === k ? ' playing' : ''}" data-k="${k}">
+      <button class="say sm" data-act="tx-line" data-k="${k}" aria-label="Ouvir esta linha">${IC.speaker}</button>
+      <div>${l.sp ? `<span class="sp">${esc(l.sp)} </span>` : ''}<span class="en">${twMarks(l.en)}</span><span class="pt">${esc(l.pt || '')}</span></div>
+    </div>`).join('');
+  const qs = (d.questions || []).map((q, k) => {
+    const ans = TX.answers[k];
+    return `<div class="q"><p>${k + 1}. ${esc(q.q)}</p><div class="opts">${q.opts.map((o, j) => {
+      const cls = ans === undefined ? '' : j === q.a ? ' correct' : j === ans ? ' wrong' : '';
+      return `<button class="opt${cls}" data-act="tx-q" data-k="${k}" data-j="${j}" ${ans !== undefined ? 'disabled' : ''}><span>${esc(o)}</span></button>`;
+    }).join('')}</div>${ans !== undefined && q.why ? `<p class="meta">${esc(q.why)}</p>` : ''}</div>`;
+  }).join('');
+  const hide = !TX.showText;
+  return head + controls + `<hr style="border:0;border-top:1px solid var(--rule);margin:4px 0">
+    <div class="panel-head"><h3>${esc(d.title || 'Texto')}</h3><span class="chips">${targets.map((i) => `<span class="tchip">${hl(i.en)}</span>`).join('')}</span></div>
+    <div class="ctrls">
+      <button class="btn ${TX.on ? '' : 'primary'}" data-act="tx-play">${TX.on ? IC.pause + ' Parar' : IC.play + ' Ouvir tudo'}</button>
+      <div class="seg" role="group" aria-label="Velocidade">${[0.7, 0.85, 1].map((r) => `<button data-act="tx-rate" data-v="${r}" aria-pressed="${TX.rate === r}">${r === 1 ? '1x' : r + 'x'}</button>`).join('')}</div>
+    </div>
+    <div class="ctrls">
+      <button class="btn small" data-act="tx-show">${hide ? 'Mostrar texto' : 'Esconder texto'}</button>
+      <button class="btn small" data-act="tx-pt">${TX.showPt ? 'Esconder tradução' : 'Mostrar tradução'}</button>
+    </div>
+    <div class="story${hide ? ' hide-text' : ''}${TX.showPt ? '' : ' hide-pt'}" id="tx-story">${lines}</div>
+    ${TX.def ? `<div class="defbar" role="status">${TX.def}</div>` : ''}
+    ${qs ? `<p class="label">Entendeu?</p><div class="qlist">${qs}</div>` : ''}`;
+}
+function twMarks(s) { return esc(s).replace(/\[\[([^\]]+)\]\]/g, (_, w) => `<mark class="tw" data-act="tx-def" data-w="${w}" role="button" tabindex="0">${w}</mark>`); }
+function renderTextSection() { const b = $('#tx-box'); if (b) b.innerHTML = textSectionHTML(); }
+function findByForm(w) {
+  const n = norm(w); const d = S.ai.text || {};
+  const pools = [(d.targets || []).map((g) => S.byGid.get(g)).filter(Boolean), S.items.filter((i) => i.t !== 'concept')];
+  for (const pool of pools) {
+    for (const i of pool) { const ans = answersFor(i); if (ans.includes(n) || ans.includes(stripLead(n))) return i; }
+    for (const i of pool) { const ans = answersFor(i).map(stripLead); if (ans.some((a) => a.length >= 3 && (n.startsWith(a) || a.startsWith(n)))) return i; }
+  }
+  return null;
+}
+function txStop() { if (!TX.on) return; TX.on = false; speechStop(); TX.playing = -1; renderTextSection(); }
+function txPlayFrom(k) {
+  const d = S.ai.text; if (!d || !TTS.ok) return;
+  plStop(); TX.on = true;
+  const step = (i) => {
+    if (!TX.on) return;
+    if (i >= d.lines.length) { TX.on = false; TX.playing = -1; renderTextSection(); return; }
+    TX.playing = i; highlightLine(i);
+    const l = d.lines[i]; const voice = l.sp && /b/i.test(l.sp) ? TTS.voiceB : TTS.voice;
+    speak(l.en, { rate: TX.rate, voice, onend: () => { if (TX.on) setTimeout(() => step(i + 1), 450); } });
+  };
+  renderTextSection(); step(k);
+}
+function highlightLine(i) { $$('#tx-story .sline').forEach((el) => el.classList.toggle('playing', Number(el.dataset.k) === i)); }
+async function genText() {
+  if (!aiOn() || TX.busy) return;
+  const targets = pickTargets(TX.focus, 6); if (!targets.length) { toast('Envie uma aula primeiro.'); return; }
+  txStop();
+  const known = S.items.filter((i) => i.t !== 'concept').map((i) => stripMarks(i.en)).slice(-120);
+  const kind = { dialogue: 'a short dialogue between two people (speakers "A" and "B")', story: 'a short story', message: 'a short message or e-mail to a friend or coworker' }[TX.type] || 'a short dialogue';
+  const prompt = `Write ${kind} in simple American English for a Brazilian adult learner (CEFR A1–A2).${S.settings.about ? '\nAbout the learner (in Portuguese): ' + S.settings.about : ''}
+Use ALL of these target words or expressions (Portuguese meaning in parentheses):
+${targets.map((i) => '- ' + stripMarks(i.en) + ' (' + i.pt + ')').join('\n')}
+You may also use these words he already studied: ${known.join(', ')}.
+Rules: 90–140 words in total; short sentences; everyday topics (work, home, family, food, weekend, travel, technology); simple present and simple past; no rare words beyond A2 except the targets. Wrap every use of a target in double square brackets, e.g. "I missed the [[deadline]]."
+Reply with only a JSON object: {"title": "...", "lines": [{"sp": "A" or "B" (or "" if not a dialogue), "en": "one or two sentences", "pt": "Brazilian Portuguese translation"}], "questions": [{"q": "a simple comprehension question in English", "opts": ["...", "...", "..."], "a": 0, "why": "short explanation in Brazilian Portuguese"}]}
+Write exactly 3 questions; "a" is the index of the correct option.`;
+  TX.ctl = new AbortController(); TX.busy = true; TX.err = ''; renderTextSection();
+  try {
+    const r = await AI.json(prompt, { tier: 'default', signal: TX.ctl.signal });
+    const lines = (r && Array.isArray(r.lines) ? r.lines : []).map((l) => ({ sp: String((l && l.sp) || '').slice(0, 2), en: String((l && l.en) || '').trim(), pt: String((l && l.pt) || '').trim() })).filter((l) => l.en);
+    if (!lines.length) throw { code: 'invalid_json' };
+    const qs = (Array.isArray(r.questions) ? r.questions : []).map((q) => ({ q: String((q && q.q) || ''), opts: (Array.isArray(q && q.opts) ? q.opts : []).map(String).slice(0, 4), a: Number(q && q.a) || 0, why: String((q && q.why) || '') }))
+      .filter((q) => q.q && q.opts.length >= 2 && q.a >= 0 && q.a < q.opts.length);
+    const data = { title: String(r.title || 'Texto').slice(0, 80), type: TX.type, lines: lines.slice(0, 30), questions: qs.slice(0, 5), targets: targets.map((i) => i.gid), at: now() };
+    TX.answers = {}; TX.playing = -1; TX.def = ''; TX.showText = !TX.listenFirst; TX.showPt = false;
+    await saveAi('text', data);
+  } catch (e) { if (!(e && e.code === 'cancelled')) TX.err = aiErrMsg(e); }
+  TX.busy = false; TX.ctl = null; renderTextSection();
+}
+
+/* ================= chat tab ================= */
+const CH = { busy: false, ctl: null, err: '' };
+function renderChat() {
+  if (!S.lessonList.length) return emptyState();
+  return `<div class="screen-head"><div><h1>Conversar</h1><p class="meta">Converse em inglês usando as palavras das aulas. A IA corrige suas frases.</p></div>
+      ${aiOn() ? `<div class="row-actions"><button class="btn" data-act="start" data-mode="write">Treino: escrever frases</button></div>` : ''}</div>
+    <div id="chat-box">${chatHTML()}</div>`;
+}
+function chatHTML() {
+  if (!aiOn()) return `<p class="notice">${esc(aiNotice())} Os treinos, a lista de palavras e o áudio funcionam sem a IA.</p>`;
+  const d = S.ai.chat;
+  if (!d || !(d.turns || []).length) {
+    return `<section class="panel"><h2>Uma conversa curta, no seu nível</h2>
+      <p class="meta">A IA puxa assunto do dia a dia e faz perguntas que pedem as palavras da ${esc(lessonName(S.lessons.get(S.latest)))}. Quando você usa uma palavra certo, ela ganha reforço.</p>
+      ${CH.busy ? '<p class="thinking">Começando…</p>' : `<div class="row-actions"><button class="btn primary big" data-act="ch-new">${IC.chat} Começar conversa</button></div>`}
+      ${CH.err ? `<p class="notice warn">${esc(CH.err)}</p>` : ''}</section>`;
+  }
+  const targets = (d.targets || []).map((g) => S.byGid.get(g)).filter(Boolean);
+  const usedOk = new Set(); (d.turns || []).forEach((t) => (t.ok || []).forEach((g) => usedOk.add(g)));
+  const msgs = (d.turns || []).map((t) => {
+    if (t.role === 'assistant') return `<div class="msg ai"><div class="row"><span>${esc(t.content)}</span>${sayBtn(t.content, 'sm')}</div></div>`;
+    const ok = (t.ok || []).map((g) => S.byGid.get(g)).filter(Boolean); const bad = (t.bad || []).map((g) => S.byGid.get(g)).filter(Boolean);
+    return `<div class="msg me">${esc(t.content)}</div>
+      ${t.fix ? `<div class="fix"><span><b>Correção:</b> ${esc(t.fix)} ${sayBtn(t.fix, 'sm')}</span>${t.tip ? `<span>${esc(t.tip)}</span>` : ''}</div>` : ''}
+      ${ok.length || bad.length ? `<div class="used">${ok.map((i) => `<span>✓ ${esc(stripMarks(i.en))}</span>`).join('')}${bad.map((i) => `<span class="no">✗ ${esc(stripMarks(i.en))}</span>`).join('')}</div>` : ''}`;
+  }).join('');
+  return `<div class="panel-head" style="margin-bottom:10px"><div class="chips">${targets.map((i) => `<span class="tchip${usedOk.has(i.gid) ? ' ok' : ''}" title="${esc(i.pt)}">${usedOk.has(i.gid) ? '✓ ' : ''}${hl(i.en)}</span>`).join('')}</div>
+      <button class="btn small" data-act="ch-new" ${CH.busy ? 'disabled' : ''}>Nova conversa</button></div>
+    <div class="chat" id="chat-log">${msgs}${CH.busy ? '<div class="msg ai"><span class="thinking">Escrevendo…</span></div>' : ''}</div>
+    ${CH.err ? `<p class="notice warn" style="margin-top:10px">${esc(CH.err)}</p>` : ''}
+    <form class="composer" data-form="chat">
+      <textarea class="field" id="chat-in" rows="1" placeholder="Responda em inglês…" aria-label="Sua mensagem" ${CH.busy ? 'disabled' : ''}></textarea>
+      <button class="btn primary" type="submit" aria-label="Enviar" ${CH.busy ? 'disabled' : ''} style="min-height:52px">${IC.send}</button>
+    </form>`;
+}
+function renderChatSection(focus) {
+  const b = $('#chat-box'); if (!b) return;
+  const draft = ($('#chat-in') || {}).value || '';
+  b.innerHTML = chatHTML();
+  const inp = $('#chat-in'); if (inp) { inp.value = draft; if (focus && !CH.busy && matchMedia('(pointer: fine)').matches) inp.focus({ preventScroll: true }); }
+  const log = $('#chat-log'); if (log && log.lastElementChild) log.lastElementChild.scrollIntoView({ block: 'nearest' });
+}
+function afterChatRender() { const log = $('#chat-log'); if (log && log.lastElementChild) log.lastElementChild.scrollIntoView({ block: 'nearest' }); }
+function matchTargets(list, targets) {
+  const out = [];
+  for (const s of Array.isArray(list) ? list : []) {
+    const n = norm(s);
+    const hit = targets.find((i) => answersFor(i).includes(n) || answersFor(i).includes(stripLead(n)) || norm(stripMarks(i.en)) === n);
+    if (hit && !out.includes(hit.gid)) out.push(hit.gid);
+  }
+  return out;
+}
+async function chatSend(text) {
+  if (!aiOn() || CH.busy) return;
+  let d = S.ai.chat;
+  if (!d || !text) {
+    const targets = pickTargets('latest', 6);
+    if (!targets.length) { toast('Envie uma aula primeiro.'); return; }
+    d = { targets: targets.map((i) => i.gid), turns: [], at: now() }; S.ai.chat = d;
+  }
+  const targets = (d.targets || []).map((g) => S.byGid.get(g)).filter(Boolean);
+  const rules = `You are a friendly English conversation partner for a Brazilian adult learner (CEFR A1–A2).${S.settings.about ? '\nAbout him (in Portuguese): ' + S.settings.about : ''}
+Goal: help him USE these target words and expressions from his English classes (Portuguese meaning in parentheses):
+${targets.map((i) => '- ' + stripMarks(i.en) + ' (' + i.pt + ')').join('\n')}
+Rules:
+- Write simple, natural American English: short sentences, common words, at most 3 sentences per message.
+- Use one or two target words naturally in each message, and end with ONE simple question that invites him to use another target word.
+- Talk about everyday life: work, home, family, food, weekend, plans.
+- If his last message has mistakes, put the corrected version of his message in "fix" and a very short explanation in Brazilian Portuguese in "tip". If it is correct, leave both empty. Ignore capital letters and final punctuation.
+- If he writes in Portuguese, put the English version of what he wanted to say in "fix".
+Reply with only a JSON object: {"reply": "...", "fix": "...", "tip": "...", "used_ok": [], "used_wrong": []}
+"used_ok" and "used_wrong": the target words (written exactly as in the list) that he used correctly or incorrectly in his LAST message.`;
+  if (text) d.turns.push({ role: 'user', content: text.slice(0, 600) });
+  const hist = d.turns.slice(-16).map((t) => ({ role: t.role, content: t.role === 'assistant' ? JSON.stringify({ reply: t.content }) : t.content }));
+  const input = { system: rules, messages: hist.length ? hist : [{ role: 'user', content: 'Start the conversation now: greet him and ask your first question.' }] };
+  CH.busy = true; CH.err = ''; CH.ctl = new AbortController(); renderChatSection();
+  try {
+    const r = await AI.json(input, { tier: 'quick', signal: CH.ctl.signal });
+    const reply = String((r && r.reply) || '').trim(); if (!reply) throw { code: 'invalid_json' };
+    if (text) {
+      const last = d.turns[d.turns.length - 1];
+      last.fix = String(r.fix || '').trim(); last.tip = String(r.tip || '').trim();
+      if (norm(last.fix) === norm(last.content)) { last.fix = ''; last.tip = ''; }
+      last.ok = matchTargets(r.used_ok, targets); last.bad = matchTargets(r.used_wrong, targets).filter((g) => !last.ok.includes(g));
+      for (const g of last.ok) { const it = S.byGid.get(g); if (it) { queueProgress(g, applyAnswer(it.p, 'chat', 1)); bumpStats(true, 0); } }
+    }
+    d.turns.push({ role: 'assistant', content: reply.slice(0, 800) });
+    d.turns = d.turns.slice(-40); d.at = now();
+    await saveAi('chat', d);
+    CH.busy = false; renderChatSection(true);
+    if (TTS.ok && S.settings.autoSpeak !== false) speak(reply);
+  } catch (e) {
+    CH.busy = false;
+    if (!(e && e.code === 'cancelled')) CH.err = aiErrMsg(e);
+    renderChatSection();
+  }
+}
+Object.assign(XACT, {
+  'pl-toggle': () => { if (PL.on) plStop(); else plPlay(); },
+  'pl-next': () => { if (!PL.list.length) plBuild(); PL.i = (PL.i + 1) % Math.max(1, PL.list.length); if (PL.on) { speechStop(); clearTimeout(PL.timer); plStep(); } else plRefresh(); },
+  'pl-prev': () => { if (!PL.list.length) plBuild(); PL.i = (PL.i - 1 + PL.list.length) % Math.max(1, PL.list.length); if (PL.on) { speechStop(); clearTimeout(PL.timer); plStep(); } else plRefresh(); },
+  'pl-src': (el) => { PL.src = el.dataset.v; lsSet('pl-src', PL.src); const was = PL.on; plStop(); plBuild(); $$('[data-act="pl-src"]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.v === PL.src))); plRefresh(); if (was) plPlay(); },
+  'pl-opt': (el) => { if (el.id === 'pl-pt') { PL.pt = el.checked; lsSet('pl-pt', PL.pt); } else { PL.rep = el.checked; lsSet('pl-rep', PL.rep); } },
+  'tx-gen': () => genText(),
+  'tx-stop': () => { if (TX.ctl) TX.ctl.abort(); },
+  'tx-type': (el) => { TX.type = el.dataset.v; lsSet('tx-type', TX.type); renderTextSection(); },
+  'tx-focus': (el) => { TX.focus = el.dataset.v; lsSet('tx-focus', TX.focus); renderTextSection(); },
+  'tx-first': (el) => { TX.listenFirst = el.checked; lsSet('tx-first', TX.listenFirst); },
+  'tx-play': () => { if (TX.on) txStop(); else txPlayFrom(TX.playing >= 0 ? TX.playing : 0); },
+  'tx-line': (el) => { const k = Number(el.dataset.k); if (TX.on) { TX.on = false; speechStop(); } const l = S.ai.text && S.ai.text.lines[k]; if (!l) return; TX.playing = k; highlightLine(k); speak(l.en, { rate: TX.rate, voice: l.sp && /b/i.test(l.sp) ? TTS.voiceB : TTS.voice }); },
+  'tx-rate': (el) => { TX.rate = Number(el.dataset.v); lsSet('tx-rate', TX.rate); $$('[data-act="tx-rate"]').forEach((b) => b.setAttribute('aria-pressed', String(Number(b.dataset.v) === TX.rate))); },
+  'tx-show': () => { TX.showText = !TX.showText; renderTextSection(); },
+  'tx-pt': () => { TX.showPt = !TX.showPt; renderTextSection(); },
+  'tx-def': (el) => { const w = el.dataset.w || el.textContent; const it = findByForm(w); TX.def = it ? `<span style="flex:1"><b>${esc(w)}</b> → ${esc(it.pt)}</span>${sayBtn(w, 'sm')}` : `<span style="flex:1"><b>${esc(w)}</b></span>${sayBtn(w, 'sm')}`; renderTextSection(); speak(w); },
+  'tx-q': (el) => { const k = Number(el.dataset.k); if (TX.answers[k] !== undefined) return; TX.answers[k] = Number(el.dataset.j); renderTextSection(); },
+  'ch-new': () => { if (CH.ctl) CH.ctl.abort(); S.ai.chat = null; CH.busy = false; chatSend(null); },
+});
+XFORM.chat = (f) => { const inp = $('#chat-in'); const v = (inp && inp.value || '').trim(); if (!v || CH.busy) return; inp.value = ''; chatSend(v); };
+document.addEventListener('keydown', (e) => {
+  if (e.target && e.target.id === 'chat-in' && e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); const f = e.target.closest('form'); if (f) f.requestSubmit ? f.requestSubmit() : XFORM.chat(f); }
+  if (e.target && e.target.matches && e.target.matches('mark.tw') && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); e.target.click(); }
+});
+/* ================= boot ================= */
+async function boot() {
+  renderShell(); render();
+  await loadLocal();
+  const h = location.hash.replace(/^#/, ''); const q = new URLSearchParams(h.includes('b=') ? h : location.search.slice(1));
+  let setup = null;
+  if (q.get('b') && q.get('k')) {
+    setup = { b: q.get('b'), k: q.get('k') };
+    try { history.replaceState(null, '', location.pathname); } catch (e) { /* ignore */ }
+  }
+  buildItems(); S.loaded = true; renderShell(); render(); updateSync();
+  if (setup) {
+    toast('Conectando à sua planilha…', 8000);
+    try { await connectBackend(setup.b, setup.k); toast('Pronto! O app está conectado à sua planilha.', 4000); render(); }
+    catch (e) { toast((e && e.message && e.code !== 'network') ? e.message : syncErrText((e && e.code) || 'network'), 7000); }
+  } else if (connected()) syncNow('boot');
+  registerSW();
+}
+function registerSW() {
+  if (!('serviceWorker' in navigator) || location.protocol !== 'https:') return;
+  navigator.serviceWorker.register('sw.js').catch(() => { /* sem modo offline neste navegador */ });
+}
+boot();
+</script>
+</body>
+</html>
